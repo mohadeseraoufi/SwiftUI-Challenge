@@ -175,6 +175,7 @@
 		4DCD88082821489B003B8C5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD882D2821B879003B8C5E /* Core Data Models */,
 				4DCD8809282148EC003B8C5E /* CovidInfoModel.swift */,
 				4DCD880B28214A45003B8C5E /* CountryCovidDetailInfo.swift */,
 			);
@@ -217,6 +218,13 @@
 				4DCD87EA2821349F003B8C5E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DCD882D2821B879003B8C5E /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

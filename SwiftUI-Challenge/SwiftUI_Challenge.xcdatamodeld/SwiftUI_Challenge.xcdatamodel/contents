@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CovidDetailInfo" representedClassName="CovidDetailInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="historyDataURL" optional="YES" attributeType="String"/>
+        <attribute name="infected" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastUpdatedAtApify" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdatedAtSource" optional="YES" attributeType="String"/>
+        <attribute name="readMe" optional="YES" attributeType="String"/>
+        <attribute name="recovered" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sourceURL" optional="YES" attributeType="String"/>
+        <attribute name="tested" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="infectedByRegion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RegionInfection" inverseName="country" inverseEntity="RegionInfection"/>
+    </entity>
+    <entity name="CovidInfo" representedClassName="CovidInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="historyDataURL" optional="YES" attributeType="String"/>
+        <attribute name="infected" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastUpdatedApify" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdatedSource" optional="YES" attributeType="String"/>
+        <attribute name="moreDataURL" optional="YES" attributeType="String"/>
+        <attribute name="recovered" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sourceURL" optional="YES" attributeType="String"/>
+        <attribute name="tested" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="RegionInfection" representedClassName="RegionInfection" syncable="YES" codeGenerationType="class">
+        <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="infected" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isoCode" optional="YES" attributeType="String"/>
+        <attribute name="recovered" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="region" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CovidDetailInfo" inverseName="infectedByRegion" inverseEntity="CovidDetailInfo"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="CovidInfo" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="CovidDetailInfo" positionX="-63" positionY="-9" width="128" height="194"/>
+        <element name="RegionInfection" positionX="-54" positionY="63" width="128" height="119"/>
     </elements>
 </model>
