@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CovidDetailInfo" representedClassName="CovidDetailInfo" syncable="YES" codeGenerationType="class">
+    <entity name="CovidDetailInfo" representedClassName="CovidDetailInfo" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="historyDataURL" optional="YES" attributeType="String"/>
@@ -13,7 +13,7 @@
         <attribute name="tested" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="infectedByRegion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RegionInfection" inverseName="country" inverseEntity="RegionInfection"/>
     </entity>
-    <entity name="CovidInfo" representedClassName="CovidInfo" syncable="YES" codeGenerationType="class">
+    <entity name="CovidInfo" representedClassName="CovidInfo" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="historyDataURL" optional="YES" attributeType="String"/>
@@ -25,7 +25,10 @@
         <attribute name="sourceURL" optional="YES" attributeType="String"/>
         <attribute name="tested" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="RegionInfection" representedClassName="RegionInfection" syncable="YES" codeGenerationType="class">
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="RegionInfection" representedClassName="RegionInfection" syncable="YES">
         <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="infected" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isoCode" optional="YES" attributeType="String"/>
@@ -37,5 +40,6 @@
         <element name="CovidInfo" positionX="-63" positionY="-18" width="128" height="179"/>
         <element name="CovidDetailInfo" positionX="-63" positionY="-9" width="128" height="194"/>
         <element name="RegionInfection" positionX="-54" positionY="63" width="128" height="119"/>
+        <element name="Item" positionX="-36" positionY="99" width="128" height="44"/>
     </elements>
 </model>

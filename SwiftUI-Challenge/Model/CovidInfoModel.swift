@@ -65,4 +65,3 @@ enum DeceasedEnum: String, Codable {
     case na = "NA"
 }
 
-typealias CovidInfo = [CovidInfoModel]
