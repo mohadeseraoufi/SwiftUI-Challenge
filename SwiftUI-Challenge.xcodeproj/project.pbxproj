@@ -110,14 +110,12 @@
 				4DCD88082821489B003B8C5E /* Model */,
 				4DCD880D28216D6A003B8C5E /* Configuration */,
 				4DCD87F928213751003B8C5E /* Networking */,
+				4DCD882C2821993A003B8C5E /* Resources */,
 				4DCD87E62821349D003B8C5E /* SwiftUI_ChallengeApp.swift */,
 				4DCD87E82821349D003B8C5E /* ContentView.swift */,
-				4DCD87EA2821349F003B8C5E /* Assets.xcassets */,
 				4DCD87EF2821349F003B8C5E /* Persistence.swift */,
 				4DCD87F12821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld */,
 				4DCD87EC2821349F003B8C5E /* Preview Content */,
-				4DCD882728218E84003B8C5E /* Development-Config.xcconfig */,
-				4DCD882928218E96003B8C5E /* Production-Config.xcconfig */,
 			);
 			path = "SwiftUI-Challenge";
 			sourceTree = "<group>";
@@ -186,6 +184,8 @@
 		4DCD880D28216D6A003B8C5E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD882728218E84003B8C5E /* Development-Config.xcconfig */,
+				4DCD882928218E96003B8C5E /* Production-Config.xcconfig */,
 				4DCD880E28216D6A003B8C5E /* Environment.swift */,
 				4DCD880F28216D6A003B8C5E /* Configuration.swift */,
 			);
@@ -209,6 +209,14 @@
 				4DCD882328218623003B8C5E /* covid-country-detail.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		4DCD882C2821993A003B8C5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD87EA2821349F003B8C5E /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
