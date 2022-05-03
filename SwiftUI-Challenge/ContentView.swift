@@ -43,6 +43,14 @@ struct ContentView: View {
     }
 
     private func addItem() {
+        EnvironmentSettings.apiClient.fetchCovidInfo { result in
+            switch result {
+            case .success(let covidInfo):
+                print(covidInfo)
+            case .failure(let apiError):
+                print(apiError)
+            }
+        }
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
