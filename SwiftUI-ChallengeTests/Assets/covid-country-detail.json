@@ -1,0 +1,11 @@
+{
+  "infected": 265782,
+  "deceased": 6875,
+  "recovered": 178358,
+  "activeCases": 80549,
+  "tested": 230861,
+  "critical": 6,
+  "sourceUrl": "https://www.worldometers.info/coronavirus/",
+  "lastUpdatedAtApify": "2022-05-03T15:00:00.000Z",
+  "readMe": "https://apify.com/onidivo/covid-dz"
+}

@@ -22,8 +22,10 @@
 		4DCD880C28214A45003B8C5E /* CountryCovidDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880B28214A45003B8C5E /* CountryCovidDetailInfo.swift */; };
 		4DCD881028216D6A003B8C5E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880E28216D6A003B8C5E /* Environment.swift */; };
 		4DCD881128216D6A003B8C5E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880F28216D6A003B8C5E /* Configuration.swift */; };
-		4DCD881328217078003B8C5E /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD881228217078003B8C5E /* TestClient.swift */; };
 		4DCD881B28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD881A28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift */; };
+		4DCD882228218612003B8C5E /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD881228217078003B8C5E /* TestClient.swift */; };
+		4DCD882528218623003B8C5E /* covid-country-detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD882328218623003B8C5E /* covid-country-detail.json */; };
+		4DCD882628218623003B8C5E /* covid-allcountries.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD882428218623003B8C5E /* covid-allcountries.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		4DCD881228217078003B8C5E /* TestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClient.swift; sourceTree = "<group>"; };
 		4DCD881828217ED6003B8C5E /* SwiftUI-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD881A28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChallengeTests.swift; sourceTree = "<group>"; };
+		4DCD882328218623003B8C5E /* covid-country-detail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "covid-country-detail.json"; sourceTree = "<group>"; };
+		4DCD882428218623003B8C5E /* covid-allcountries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "covid-allcountries.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,6 @@
 			children = (
 				4DCD87FC28213751003B8C5E /* ClovidInfoClient.swift */,
 				4DCD87FD28213751003B8C5E /* MockClient.swift */,
-				4DCD881228217078003B8C5E /* TestClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -184,9 +187,20 @@
 		4DCD881928217ED6003B8C5E /* SwiftUI-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD88212821860B003B8C5E /* Assets */,
 				4DCD881A28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift */,
+				4DCD881228217078003B8C5E /* TestClient.swift */,
 			);
 			path = "SwiftUI-ChallengeTests";
+			sourceTree = "<group>";
+		};
+		4DCD88212821860B003B8C5E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD882428218623003B8C5E /* covid-allcountries.json */,
+				4DCD882328218623003B8C5E /* covid-country-detail.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCD882628218623003B8C5E /* covid-allcountries.json in Resources */,
+				4DCD882528218623003B8C5E /* covid-country-detail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +309,6 @@
 				4DCD881028216D6A003B8C5E /* Environment.swift in Sources */,
 				4DCD87F02821349F003B8C5E /* Persistence.swift in Sources */,
 				4DCD87E92821349D003B8C5E /* ContentView.swift in Sources */,
-				4DCD881328217078003B8C5E /* TestClient.swift in Sources */,
 				4DCD880C28214A45003B8C5E /* CountryCovidDetailInfo.swift in Sources */,
 				4DCD880328213751003B8C5E /* ClovidInfoClient.swift in Sources */,
 				4DCD87E72821349D003B8C5E /* SwiftUI_ChallengeApp.swift in Sources */,
@@ -310,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCD882228218612003B8C5E /* TestClient.swift in Sources */,
 				4DCD881B28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
