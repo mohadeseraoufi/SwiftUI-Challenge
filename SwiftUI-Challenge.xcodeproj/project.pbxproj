@@ -244,12 +244,9 @@
 		4DCD882D2821B879003B8C5E /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DCD882E2821BF00003B8C5E /* RegionInfection+CoreDataClass.swift */,
-				4DCD882F2821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift */,
-				4DCD88302821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift */,
-				4DCD88312821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */,
-				4DCD88322821BF00003B8C5E /* CovidInfo+CoreDataClass.swift */,
-				4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */,
+				4DCD88672821D1E7003B8C5E /* CovidModel */,
+				4DCD88662821D1D8003B8C5E /* Region Model */,
+				4DCD88652821D1C9003B8C5E /* Detail Model */,
 			);
 			path = "Core Data Models";
 			sourceTree = "<group>";
@@ -271,6 +268,33 @@
 				4DCD87F12821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DCD88652821D1C9003B8C5E /* Detail Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD88302821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift */,
+				4DCD88312821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */,
+			);
+			path = "Detail Model";
+			sourceTree = "<group>";
+		};
+		4DCD88662821D1D8003B8C5E /* Region Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD882E2821BF00003B8C5E /* RegionInfection+CoreDataClass.swift */,
+				4DCD882F2821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift */,
+			);
+			path = "Region Model";
+			sourceTree = "<group>";
+		};
+		4DCD88672821D1E7003B8C5E /* CovidModel */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD88322821BF00003B8C5E /* CovidInfo+CoreDataClass.swift */,
+				4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */,
+			);
+			path = CovidModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

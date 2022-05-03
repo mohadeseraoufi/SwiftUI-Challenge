@@ -8,15 +8,17 @@
 import Foundation
 import Network
 
-enum NetworkStatus {
-    case connected
-    case disconnected
-}
+
 
 class NetworkAvailibility {
     
+    enum NetworkStatus {
+        case connected
+        case disconnected
+    }
+    
     // MARK: - Properties
-    static var status: NetworkStatus {
+    public static var status: NetworkStatus {
         let monitor = NWPathMonitor()
         var stat: NetworkStatus = .disconnected
         monitor.pathUpdateHandler = { path in

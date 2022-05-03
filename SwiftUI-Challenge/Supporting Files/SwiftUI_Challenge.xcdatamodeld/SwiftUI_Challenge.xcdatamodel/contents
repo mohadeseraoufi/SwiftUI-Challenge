@@ -14,13 +14,13 @@
         <relationship name="infectedByRegion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RegionInfection" inverseName="country" inverseEntity="RegionInfection"/>
     </entity>
     <entity name="CovidInfo" representedClassName="CovidInfo" syncable="YES">
-        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="country" attributeType="String"/>
         <attribute name="deceased" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="historyDataURL" optional="YES" attributeType="String"/>
+        <attribute name="historyDataURL" attributeType="String"/>
         <attribute name="infected" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="lastUpdatedApify" optional="YES" attributeType="String"/>
-        <attribute name="lastUpdatedSource" optional="YES" attributeType="String"/>
-        <attribute name="moreDataURL" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdatedApify" attributeType="String"/>
+        <attribute name="lastUpdatedSource" attributeType="String"/>
+        <attribute name="moreDataURL" attributeType="String"/>
         <attribute name="recovered" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sourceURL" optional="YES" attributeType="String"/>
         <attribute name="tested" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>

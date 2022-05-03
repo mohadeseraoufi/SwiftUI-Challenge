@@ -20,12 +20,12 @@ extension CovidInfo {
     @NSManaged public var tested: Int32
     @NSManaged public var recovered: Int32
     @NSManaged public var deceased: Int32
-    @NSManaged public var country: String?
-    @NSManaged public var moreDataURL: String?
-    @NSManaged public var historyDataURL: String?
+    @NSManaged public var country: String
+    @NSManaged public var moreDataURL: String
+    @NSManaged public var historyDataURL: String
     @NSManaged public var sourceURL: String?
-    @NSManaged public var lastUpdatedApify: String?
-    @NSManaged public var lastUpdatedSource: String?
+    @NSManaged public var lastUpdatedApify: String
+    @NSManaged public var lastUpdatedSource: String
 
 }
 
