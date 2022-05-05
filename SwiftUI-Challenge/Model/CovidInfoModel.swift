@@ -59,6 +59,18 @@ enum DeceasedUnion: Codable {
             try container.encodeNil()
         }
     }
+    
+    /// Since Apify api returns multiple value types for a key we only need the integer represeting the number
+    func intValue() -> Int? {
+        switch self {
+        case .enumeration(_):
+            return nil
+        case .integer(let int):
+            return int
+        case .null:
+            return nil
+        }
+    }
 }
 
 enum DeceasedEnum: String, Codable {

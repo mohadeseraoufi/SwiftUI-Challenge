@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryCovidInfoViewModel {
+class CountryCovidInfoViewModel {
     
     // MARK: - Properties
     let infected: Int?
@@ -20,9 +20,9 @@ struct CountryCovidInfoViewModel {
     
     init(covidInfo: CovidInfoModel) {
         self.infected = covidInfo.infected
-        self.tested = getIntValueFrom(info: covidInfo.tested)
-        self.recovered = getIntValueFrom(info: covidInfo.recovered)
-        self.deceased = getIntValueFrom(info: covidInfo.deceased)
+        self.tested = covidInfo.tested.intValue()
+        self.recovered = covidInfo.recovered.intValue()
+        self.deceased = covidInfo.deceased.intValue()
         self.country = covidInfo.country
         self.moreDataURL = covidInfo.moreDataURL
         self.historyDataURL = covidInfo.historyDataURL
@@ -44,16 +44,6 @@ struct CountryCovidInfoViewModel {
         self.lastUpdatedSource = covidInfo.lastUpdatedSource
     }
     
-    /// Since Apify api returns multiple value types for a key we only need the integer represeting the number
-    func getIntValueFrom(info:DeceasedUnion) -> Int? {
-        switch info {
-        case .enumeration(_):
-            return nil
-        case .integer(let int):
-            return int
-        case .null:
-            return nil
-        }
-    }
+    
     
 }

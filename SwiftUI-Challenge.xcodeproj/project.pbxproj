@@ -30,14 +30,14 @@
 		4DCD882A28218E96003B8C5E /* Production-Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD882928218E96003B8C5E /* Production-Config.xcconfig */; };
 		4DCD88342821BF00003B8C5E /* RegionInfection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD882E2821BF00003B8C5E /* RegionInfection+CoreDataClass.swift */; };
 		4DCD88352821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD882F2821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift */; };
-		4DCD88362821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88302821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift */; };
-		4DCD88372821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88312821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */; };
 		4DCD88382821BF00003B8C5E /* CovidInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88322821BF00003B8C5E /* CovidInfo+CoreDataClass.swift */; };
 		4DCD88392821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */; };
 		4DCD885C2821C38F003B8C5E /* CountryCovidInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD885B2821C38F003B8C5E /* CountryCovidInfoViewModel.swift */; };
 		4DCD88602821C408003B8C5E /* CovidStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD885F2821C408003B8C5E /* CovidStatsViewModel.swift */; };
 		4DCD88622821C416003B8C5E /* CovidStatsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88612821C416003B8C5E /* CovidStatsDetailViewModel.swift */; };
 		4DCD88642821C6BF003B8C5E /* NetworkAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88632821C6BF003B8C5E /* NetworkAvailibility.swift */; };
+		4DCD886A2823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88682823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift */; };
+		4DCD886B2823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88692823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,14 +77,14 @@
 		4DCD882B2821943A003B8C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DCD882E2821BF00003B8C5E /* RegionInfection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegionInfection+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DCD882F2821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegionInfection+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4DCD88302821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidDetailInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4DCD88312821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidDetailInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DCD88322821BF00003B8C5E /* CovidInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DCD885B2821C38F003B8C5E /* CountryCovidInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidInfoViewModel.swift; sourceTree = "<group>"; };
 		4DCD885F2821C408003B8C5E /* CovidStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatsViewModel.swift; sourceTree = "<group>"; };
 		4DCD88612821C416003B8C5E /* CovidStatsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatsDetailViewModel.swift; sourceTree = "<group>"; };
 		4DCD88632821C6BF003B8C5E /* NetworkAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAvailibility.swift; sourceTree = "<group>"; };
+		4DCD88682823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CovidDetailInfo+CoreDataClass.swift"; path = "SwiftUI-Challenge/Model/Core Data Models/Detail Model/CovidDetailInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4DCD88692823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidDetailInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +108,7 @@
 		4DCD87DA2821349D003B8C5E = {
 			isa = PBXGroup;
 			children = (
+				4DCD88682823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift */,
 				4DCD87E52821349D003B8C5E /* SwiftUI-Challenge */,
 				4DCD881928217ED6003B8C5E /* SwiftUI-ChallengeTests */,
 				4DCD87E42821349D003B8C5E /* Products */,
@@ -273,8 +274,6 @@
 		4DCD88652821D1C9003B8C5E /* Detail Model */ = {
 			isa = PBXGroup;
 			children = (
-				4DCD88302821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift */,
-				4DCD88312821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */,
 			);
 			path = "Detail Model";
 			sourceTree = "<group>";
@@ -291,6 +290,7 @@
 		4DCD88672821D1E7003B8C5E /* CovidModel */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD88692823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */,
 				4DCD88322821BF00003B8C5E /* CovidInfo+CoreDataClass.swift */,
 				4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */,
 			);
@@ -410,18 +410,18 @@
 				4DCD88392821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift in Sources */,
 				4DCD88622821C416003B8C5E /* CovidStatsDetailViewModel.swift in Sources */,
 				4DCD880328213751003B8C5E /* ClovidInfoClient.swift in Sources */,
-				4DCD88362821BF00003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */,
 				4DCD87E72821349D003B8C5E /* SwiftUI_ChallengeApp.swift in Sources */,
 				4DCD881128216D6A003B8C5E /* Configuration.swift in Sources */,
 				4DCD880A282148EC003B8C5E /* CovidInfoModel.swift in Sources */,
 				4DCD88342821BF00003B8C5E /* RegionInfection+CoreDataClass.swift in Sources */,
 				4DCD87F32821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld in Sources */,
 				4DCD880528213751003B8C5E /* APIError.swift in Sources */,
-				4DCD88372821BF00003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */,
 				4DCD88352821BF00003B8C5E /* RegionInfection+CoreDataProperties.swift in Sources */,
+				4DCD886A2823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */,
 				4DCD88602821C408003B8C5E /* CovidStatsViewModel.swift in Sources */,
 				4DCD880628213751003B8C5E /* APIEndpoint.swift in Sources */,
 				4DCD88642821C6BF003B8C5E /* NetworkAvailibility.swift in Sources */,
+				4DCD886B2823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */,
 				4DCD880728213751003B8C5E /* APIClient.swift in Sources */,
 				4DCD88382821BF00003B8C5E /* CovidInfo+CoreDataClass.swift in Sources */,
 			);
@@ -582,7 +582,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SwiftUI-Challenge/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-Challenge/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -618,7 +618,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SwiftUI-Challenge/Info.plist";
+				INFOPLIST_FILE = "SwiftUI-Challenge/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

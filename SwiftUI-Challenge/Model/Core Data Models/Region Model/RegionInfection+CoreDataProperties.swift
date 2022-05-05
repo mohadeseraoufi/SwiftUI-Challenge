@@ -16,8 +16,8 @@ extension RegionInfection {
         return NSFetchRequest<RegionInfection>(entityName: "RegionInfection")
     }
 
-    @NSManaged public var region: String?
-    @NSManaged public var isoCode: String?
+    @NSManaged public var region: String
+    @NSManaged public var isoCode: String
     @NSManaged public var infected: Int32
     @NSManaged public var recovered: Int32
     @NSManaged public var deceased: Int32

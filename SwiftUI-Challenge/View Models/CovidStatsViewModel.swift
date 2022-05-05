@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CovidStatsViewModel {
+class CovidStatsViewModel {
     
     //MARK: - Properties
     private var countriesInfo:[CountryCovidInfoViewModel] = []
@@ -22,6 +22,7 @@ struct CovidStatsViewModel {
                 switch result {
                 case .success(let covidInfo):
                     print(covidInfo)
+                    self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
                 case .failure(let error):
                     fatalError(error.localizedDescription)
                 }

@@ -29,4 +29,13 @@ struct CountryCovidDetailModel: Codable {
 struct InfectedByRegion: Codable {
     let region, isoCode: String
     let infected, recovered, deceased: Int
+    
+    // Parse core data model
+    init(regionInfo:RegionInfection) {
+        self.region = regionInfo.region
+        self.isoCode = regionInfo.isoCode
+        self.infected = Int(regionInfo.infected)
+        self.recovered = Int(regionInfo.recovered)
+        self.deceased = Int(regionInfo.deceased)
+    }
 }
