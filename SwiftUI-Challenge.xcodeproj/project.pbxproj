@@ -11,7 +11,6 @@
 		4DCD87E92821349D003B8C5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87E82821349D003B8C5E /* ContentView.swift */; };
 		4DCD87EB2821349F003B8C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD87EA2821349F003B8C5E /* Assets.xcassets */; };
 		4DCD87EE2821349F003B8C5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD87ED2821349F003B8C5E /* Preview Assets.xcassets */; };
-		4DCD87F02821349F003B8C5E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87EF2821349F003B8C5E /* Persistence.swift */; };
 		4DCD87F32821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87F12821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld */; };
 		4DCD880328213751003B8C5E /* ClovidInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87FC28213751003B8C5E /* ClovidInfoClient.swift */; };
 		4DCD880428213751003B8C5E /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87FD28213751003B8C5E /* MockClient.swift */; };
@@ -21,7 +20,6 @@
 		4DCD880A282148EC003B8C5E /* CovidInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD8809282148EC003B8C5E /* CovidInfoModel.swift */; };
 		4DCD880C28214A45003B8C5E /* CountryCovidDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880B28214A45003B8C5E /* CountryCovidDetailInfo.swift */; };
 		4DCD881028216D6A003B8C5E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880E28216D6A003B8C5E /* Environment.swift */; };
-		4DCD881128216D6A003B8C5E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD880F28216D6A003B8C5E /* Configuration.swift */; };
 		4DCD881B28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD881A28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift */; };
 		4DCD882228218612003B8C5E /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD881228217078003B8C5E /* TestClient.swift */; };
 		4DCD882528218623003B8C5E /* covid-country-detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD882328218623003B8C5E /* covid-country-detail.json */; };
@@ -38,6 +36,7 @@
 		4DCD88642821C6BF003B8C5E /* NetworkAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88632821C6BF003B8C5E /* NetworkAvailibility.swift */; };
 		4DCD886A2823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88682823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift */; };
 		4DCD886B2823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD88692823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */; };
+		4DCD886E2823E3CF003B8C5E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD886D2823E3CF003B8C5E /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		4DCD87E82821349D003B8C5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DCD87EA2821349F003B8C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCD87ED2821349F003B8C5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4DCD87EF2821349F003B8C5E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4DCD87F22821349F003B8C5E /* SwiftUI_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		4DCD87FC28213751003B8C5E /* ClovidInfoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClovidInfoClient.swift; sourceTree = "<group>"; };
 		4DCD87FD28213751003B8C5E /* MockClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 		4DCD8809282148EC003B8C5E /* CovidInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoModel.swift; sourceTree = "<group>"; };
 		4DCD880B28214A45003B8C5E /* CountryCovidDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidDetailInfo.swift; sourceTree = "<group>"; };
 		4DCD880E28216D6A003B8C5E /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		4DCD880F28216D6A003B8C5E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4DCD881228217078003B8C5E /* TestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClient.swift; sourceTree = "<group>"; };
 		4DCD881828217ED6003B8C5E /* SwiftUI-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD881A28217ED6003B8C5E /* SwiftUI_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChallengeTests.swift; sourceTree = "<group>"; };
@@ -85,6 +82,7 @@
 		4DCD88632821C6BF003B8C5E /* NetworkAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAvailibility.swift; sourceTree = "<group>"; };
 		4DCD88682823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CovidDetailInfo+CoreDataClass.swift"; path = "SwiftUI-Challenge/Model/Core Data Models/Detail Model/CovidDetailInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DCD88692823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidDetailInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4DCD886D2823E3CF003B8C5E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +125,7 @@
 		4DCD87E52821349D003B8C5E /* SwiftUI-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD886C2823E3C4003B8C5E /* Controllers */,
 				4DCD88592821C303003B8C5E /* View Models */,
 				4DCD88082821489B003B8C5E /* Model */,
 				4DCD880D28216D6A003B8C5E /* Configuration */,
@@ -135,7 +134,6 @@
 				4DCD885A2821C320003B8C5E /* Supporting Files */,
 				4DCD87E62821349D003B8C5E /* SwiftUI_ChallengeApp.swift */,
 				4DCD87E82821349D003B8C5E /* ContentView.swift */,
-				4DCD87EF2821349F003B8C5E /* Persistence.swift */,
 				4DCD87EC2821349F003B8C5E /* Preview Content */,
 			);
 			path = "SwiftUI-Challenge";
@@ -210,7 +208,6 @@
 				4DCD882728218E84003B8C5E /* Development-Config.xcconfig */,
 				4DCD882928218E96003B8C5E /* Production-Config.xcconfig */,
 				4DCD880E28216D6A003B8C5E /* Environment.swift */,
-				4DCD880F28216D6A003B8C5E /* Configuration.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -295,6 +292,14 @@
 				4DCD88332821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift */,
 			);
 			path = CovidModel;
+			sourceTree = "<group>";
+		};
+		4DCD886C2823E3C4003B8C5E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD886D2823E3CF003B8C5E /* DataController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,15 +408,14 @@
 			files = (
 				4DCD880428213751003B8C5E /* MockClient.swift in Sources */,
 				4DCD881028216D6A003B8C5E /* Environment.swift in Sources */,
-				4DCD87F02821349F003B8C5E /* Persistence.swift in Sources */,
 				4DCD885C2821C38F003B8C5E /* CountryCovidInfoViewModel.swift in Sources */,
 				4DCD87E92821349D003B8C5E /* ContentView.swift in Sources */,
 				4DCD880C28214A45003B8C5E /* CountryCovidDetailInfo.swift in Sources */,
+				4DCD886E2823E3CF003B8C5E /* DataController.swift in Sources */,
 				4DCD88392821BF00003B8C5E /* CovidInfo+CoreDataProperties.swift in Sources */,
 				4DCD88622821C416003B8C5E /* CovidStatsDetailViewModel.swift in Sources */,
 				4DCD880328213751003B8C5E /* ClovidInfoClient.swift in Sources */,
 				4DCD87E72821349D003B8C5E /* SwiftUI_ChallengeApp.swift in Sources */,
-				4DCD881128216D6A003B8C5E /* Configuration.swift in Sources */,
 				4DCD880A282148EC003B8C5E /* CovidInfoModel.swift in Sources */,
 				4DCD88342821BF00003B8C5E /* RegionInfection+CoreDataClass.swift in Sources */,
 				4DCD87F32821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld in Sources */,
