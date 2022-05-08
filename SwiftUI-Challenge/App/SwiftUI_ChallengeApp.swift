@@ -13,7 +13,7 @@ struct SwiftUI_ChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeStatsView()
+            TabBarContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

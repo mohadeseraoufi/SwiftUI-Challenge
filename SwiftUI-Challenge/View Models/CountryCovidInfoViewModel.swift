@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CountryCovidInfoViewModel {
+class CountryCovidInfoViewModel: Identifiable {
     
     // MARK: - Properties
     let infected: Int?

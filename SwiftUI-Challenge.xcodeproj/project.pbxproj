@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		4D728F8C28281C08000BE6C0 /* CovidInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F8828281BAE000BE6C0 /* CovidInfo+CoreDataClass.swift */; };
 		4D728F8D28281C08000BE6C0 /* CovidInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F8928281BAE000BE6C0 /* CovidInfo+CoreDataProperties.swift */; };
-		4DCD87E92821349D003B8C5E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87E82821349D003B8C5E /* HomeStatsView.swift */; };
+		4D728F912828289E000BE6C0 /* TabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F902828289E000BE6C0 /* TabBarContentView.swift */; };
+		4D728F9328282C42000BE6C0 /* CovidCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F9228282C42000BE6C0 /* CovidCardView.swift */; };
+		4DCD87E92821349D003B8C5E /* CovidStatsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87E82821349D003B8C5E /* CovidStatsContentView.swift */; };
 		4DCD87EB2821349F003B8C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD87EA2821349F003B8C5E /* Assets.xcassets */; };
 		4DCD87EE2821349F003B8C5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD87ED2821349F003B8C5E /* Preview Assets.xcassets */; };
 		4DCD87F32821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD87F12821349F003B8C5E /* SwiftUI_Challenge.xcdatamodeld */; };
@@ -57,8 +59,10 @@
 /* Begin PBXFileReference section */
 		4D728F8828281BAE000BE6C0 /* CovidInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4D728F8928281BAE000BE6C0 /* CovidInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4D728F902828289E000BE6C0 /* TabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContentView.swift; sourceTree = "<group>"; };
+		4D728F9228282C42000BE6C0 /* CovidCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCardView.swift; sourceTree = "<group>"; };
 		4DCD87E32821349D003B8C5E /* SwiftUI-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DCD87E82821349D003B8C5E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		4DCD87E82821349D003B8C5E /* CovidStatsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatsContentView.swift; sourceTree = "<group>"; };
 		4DCD87EA2821349F003B8C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCD87ED2821349F003B8C5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DCD87F22821349F003B8C5E /* SwiftUI_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_Challenge.xcdatamodel; sourceTree = "<group>"; };
@@ -113,6 +117,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D728F8E28282670000BE6C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD887A2826B5CC003B8C5E /* SwiftUI_ChallengeApp.swift */,
+				4DCD88742826A6B9003B8C5E /* SceneDelegate.swift */,
+				4DCD88782826A948003B8C5E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4D728F8F282826D0000BE6C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD87E82821349D003B8C5E /* CovidStatsContentView.swift */,
+				4D728F902828289E000BE6C0 /* TabBarContentView.swift */,
+				4D728F9228282C42000BE6C0 /* CovidCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4DCD87DA2821349D003B8C5E = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +158,8 @@
 		4DCD87E52821349D003B8C5E /* SwiftUI-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				4D728F8F282826D0000BE6C0 /* View */,
+				4D728F8E28282670000BE6C0 /* App */,
 				4DCD88712826A3D9003B8C5E /* Data Providers */,
 				4DCD886C2823E3C4003B8C5E /* Controllers */,
 				4DCD88592821C303003B8C5E /* View Models */,
@@ -142,11 +168,7 @@
 				4DCD87F928213751003B8C5E /* Networking */,
 				4DCD882C2821993A003B8C5E /* Resources */,
 				4DCD885A2821C320003B8C5E /* Supporting Files */,
-				4DCD88742826A6B9003B8C5E /* SceneDelegate.swift */,
-				4DCD87E82821349D003B8C5E /* HomeStatsView.swift */,
-				4DCD88782826A948003B8C5E /* AppDelegate.swift */,
 				4DCD87EC2821349F003B8C5E /* Preview Content */,
-				4DCD887A2826B5CC003B8C5E /* SwiftUI_ChallengeApp.swift */,
 			);
 			path = "SwiftUI-Challenge";
 			sourceTree = "<group>";
@@ -434,7 +456,7 @@
 				4DCD880428213751003B8C5E /* MockClient.swift in Sources */,
 				4DCD881028216D6A003B8C5E /* Environment.swift in Sources */,
 				4DCD885C2821C38F003B8C5E /* CountryCovidInfoViewModel.swift in Sources */,
-				4DCD87E92821349D003B8C5E /* HomeStatsView.swift in Sources */,
+				4DCD87E92821349D003B8C5E /* CovidStatsContentView.swift in Sources */,
 				4DCD880C28214A45003B8C5E /* CountryCovidDetailInfo.swift in Sources */,
 				4DCD886E2823E3CF003B8C5E /* DataController.swift in Sources */,
 				4DCD88622821C416003B8C5E /* CovidStatsDetailViewModel.swift in Sources */,
@@ -449,9 +471,11 @@
 				4DCD886A2823D332003B8C5E /* CovidDetailInfo+CoreDataClass.swift in Sources */,
 				4DCD88602821C408003B8C5E /* CovidStatsViewModel.swift in Sources */,
 				4DCD880628213751003B8C5E /* APIEndpoint.swift in Sources */,
+				4D728F912828289E000BE6C0 /* TabBarContentView.swift in Sources */,
 				4DCD88642821C6BF003B8C5E /* NetworkAvailibility.swift in Sources */,
 				4DCD886B2823D332003B8C5E /* CovidDetailInfo+CoreDataProperties.swift in Sources */,
 				4DCD887F2826D511003B8C5E /* CovidDetailCDProvider.swift in Sources */,
+				4D728F9328282C42000BE6C0 /* CovidCardView.swift in Sources */,
 				4DCD88772826A89C003B8C5E /* CoreDataStack.swift in Sources */,
 				4DCD880728213751003B8C5E /* APIClient.swift in Sources */,
 				4DCD88732826A424003B8C5E /* CovidStatsDataProvider.swift in Sources */,
