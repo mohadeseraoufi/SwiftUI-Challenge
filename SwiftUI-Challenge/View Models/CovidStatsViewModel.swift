@@ -10,9 +10,17 @@ import Foundation
 class CovidStatsViewModel {
     
     //MARK: - Properties
+    private var appDelegate: AppDelegate!
     private var countriesInfo:[CountryCovidInfoViewModel] = []
     private var apiClient = EnvironmentSettings.apiClient
+    private lazy var covidStatsDataProvider: CovidStatsCDProvider = {
+        let provider = CovidStatsCDProvider(with: appDelegate.coreDataStack.persistentContainer)
+        return provider
+    }()
     
+    init(appDelegate: AppDelegate) {
+        self.appDelegate = appDelegate
+    }
     
     func getCovidStatsInfo() {
         
@@ -23,14 +31,32 @@ class CovidStatsViewModel {
                 case .success(let covidInfo):
                     print(covidInfo)
                     self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
+                    self.cacheCovidInfo()
                 case .failure(let error):
                     fatalError(error.localizedDescription)
                 }
             }
         } else {
             // Get info from cache
+            covidStatsDataProvider.fetchCovidInfo { result in
+                switch result {
+                case .success(let covidInfo):
+                    print(covidInfo)
+                    self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
+                case .failure(let error):
+                    fatalError(error.localizedDescription)
+                }
+            }
         }
         
     }
     
+    func cacheCovidInfo() {
+        covidStatsDataProvider.saveCovidInfo(countriesCovidInfo: countriesInfo)
+    }
+    
+    
+    
 }
+
+

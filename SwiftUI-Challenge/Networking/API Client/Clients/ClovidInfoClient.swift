@@ -14,7 +14,8 @@ final class CovidInfoClient: APIClient {
     // MARK: - Properties
 
     // MARK: -
-    
+    typealias Model = CovidInfoModel
+
     private let baseUrl: URL
 
     // MARK: - Initialization

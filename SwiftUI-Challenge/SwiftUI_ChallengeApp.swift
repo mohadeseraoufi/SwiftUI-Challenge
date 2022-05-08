@@ -1,4 +1,3 @@
-//
 //  SwiftUI_ChallengeApp.swift
 //  SwiftUI-Challenge
 //
@@ -14,7 +13,7 @@ struct SwiftUI_ChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeStatsView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

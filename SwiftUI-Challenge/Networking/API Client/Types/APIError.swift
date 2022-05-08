@@ -17,3 +17,11 @@ internal enum APIError: Error {
     case requestNotFound
     
 }
+
+internal enum CoreDataError: Error {
+    
+    // MARK: - Cases
+    
+    case fetchFailed
+    
+}

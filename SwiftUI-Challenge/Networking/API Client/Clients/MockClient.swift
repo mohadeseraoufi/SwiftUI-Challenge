@@ -17,6 +17,8 @@ import Foundation
 final class MockClient: APIClient {
     
 
+    typealias Model = CovidInfoModel
+
     // MARK: - Types
 
    enum Response {
