@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct CovidStatsDetailViewModel {
+class CovidStatsDetailViewModel: ObservableObject {
     
     //MARK: - Properties
 
@@ -53,4 +54,7 @@ struct CovidStatsDetailViewModel {
         })
         
     }
+    
+    
+    
 }

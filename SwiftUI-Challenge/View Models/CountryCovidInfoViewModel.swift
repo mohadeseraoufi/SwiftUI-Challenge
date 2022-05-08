@@ -13,7 +13,7 @@ class CountryCovidInfoViewModel: Identifiable {
     let infected: Int?
     let tested, recovered, deceased: Int?
     let country: String
-    let moreDataURL, historyDataURL: String
+    var moreDataURL, historyDataURL: String
     let sourceURL: String?
     let lastUpdatedApify: String
     let lastUpdatedSource: String?

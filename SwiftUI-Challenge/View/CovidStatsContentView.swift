@@ -33,7 +33,7 @@ struct CovidStatsContentView: View {
                     
                     
                     NavigationLink{
-                        
+                        CovidDetailView(covidDetailInfo: covidInfo)
                     } label: {
                         CovidCardView(covidInfo: covidInfo)
                     }
@@ -42,13 +42,13 @@ struct CovidStatsContentView: View {
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
                     
                 }
-                .navigationBarTitle(Text("Covid Info"))
+                .navigationBarTitle(Text("Covid-19 Stats"))
             }.navigationViewStyle(StackNavigationViewStyle())
                 
             
         }.onAppear {
             covidStatsViewModel.getCovidStatsInfo(completion: { covidInfo in
-                print(covidInfo[0].country)
+                print(covidInfo)
             })
         }
             

@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-import SwiftUI
 
 class CovidStatsCDProvider {
     
@@ -46,14 +45,5 @@ class CovidStatsCDProvider {
         }
         coreDataStack.saveContext()
     }
-    
-    func save() {
-        do {
-            try coreDataStack.persistentContainer.viewContext.save()
-        } catch {
-            fatalError()
-        }
-    }
-    
     
 }

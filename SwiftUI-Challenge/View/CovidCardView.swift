@@ -41,19 +41,6 @@ struct CovidCardView: View {
                         .bold()
                 }
                 
-                HStack{
-                    Circle()
-                        .fill(.green)
-                        .frame(width: 10, height: 10)
-                    
-                    Text("Recovered:")
-                        .foregroundColor(.white)
-                        .bold()
-                    
-                    Text(String(covidInfo.recovered ?? 0))
-                        .foregroundColor(.green)
-                        .bold()
-                }
                 
                 Spacer()
             }.padding()
