@@ -30,9 +30,30 @@ final class CovidInfoClient: APIClient {
     }
     
     func refreshInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
-        
+        // Create and Initiate Data Task
         sendRequest(with: request(for: .refreshInfo), completion)
 
+    }
+    
+    func fetchCovidDetailInfo(with url: String, _ completion: @escaping (Result<CountryCovidDetailModel, APIError>) -> Void) {
+        // Create and Initiate Data Task
+        sendRequest(with: request(for: .countryDetail(url)), completion)
+
+    }
+    
+    // MARK: - Helper Methods
+
+    private func request(for endpoint: APIEndpoint) -> URLRequest {
+        // Create URL
+        let url = baseUrl.appendingPathComponent(endpoint.path)
+
+        // Create Request
+        var request = URLRequest(url: url)
+
+        // Configure Request
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        return request
     }
     
     func sendRequest<T: Codable>(with request: URLRequest,
@@ -51,7 +72,9 @@ final class CovidInfoClient: APIClient {
                     let countriesCovidInfo = try decoder.decode(T.self, from: data)
 
                     // Invoke Handler
-                    completion(.success(countriesCovidInfo))
+                    DispatchQueue.main.async {
+                        completion(.success(countriesCovidInfo))
+                    }
                 } catch {
                     // Invoke Handler
                     completion(.failure(.invalidResponse))
@@ -70,54 +93,5 @@ final class CovidInfoClient: APIClient {
         }.resume()
     }
 
-    // MARK: - Helper Methods
-
-    private func request(for endpoint: APIEndpoint) -> URLRequest {
-        // Create URL
-        let url = baseUrl.appendingPathComponent(endpoint.path)
-
-        // Create Request
-        var request = URLRequest(url: url)
-
-        // Configure Request
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        return request
-    }
-    
-    func fetchCovidDetailInfo(with url: String, _ completion: @escaping (Result<CountryCovidDetailModel, APIError>) -> Void) {
-        // Create and Initiate Data Task
-        URLSession.shared.dataTask(with: request(for: .countryDetail(url))) { (data, response, error) in
-            if let data = data {
-                do {
-                    // Initialize JSON Decoder
-                    let decoder = JSONDecoder()
-
-                    // Configure JSON Decoder
-                    decoder.dateDecodingStrategy = .iso8601
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-                    // Decode JSON Response
-                    let covidInfoDetail = try decoder.decode(CountryCovidDetailModel.self, from: data)
-
-                    // Invoke Handler
-                    completion(.success(covidInfoDetail))
-                } catch {
-                    // Invoke Handler
-                    completion(.failure(.invalidResponse))
-                }
-
-            } else {
-                // Invoke Handler
-                completion(.failure(.requestFailed))
-                
-                if let error = error {
-//                    DDLogError("Unable to Fetch Episodes \(error)")
-                } else {
-//                    DDLogError("Unable to Fetch Episodes")
-                }
-            }
-        }.resume()
-    }
 
 }

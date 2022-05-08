@@ -6,33 +6,33 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreData
 
-class CovidStatsViewModel {
+class CovidStatsViewModel: ObservableObject {
     
     //MARK: - Properties
-    private var appDelegate: AppDelegate!
-    private var countriesInfo:[CountryCovidInfoViewModel] = []
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Published var countriesInfo:[CountryCovidInfoViewModel] = []
     private var apiClient = EnvironmentSettings.apiClient
     private lazy var covidStatsDataProvider: CovidStatsCDProvider = {
-        let provider = CovidStatsCDProvider(with: appDelegate.coreDataStack.persistentContainer)
+        let provider = CovidStatsCDProvider(with: appDelegate.coreDataStack)
         return provider
     }()
     
-    init(appDelegate: AppDelegate) {
-        self.appDelegate = appDelegate
-    }
     
-    func getCovidStatsInfo() {
+    func getCovidStatsInfo(completion: @escaping ([CountryCovidInfoViewModel]) -> Void) {
         
-        if NetworkAvailibility.status == .connected {
+        if Reachability.isConnectedToNetwork() {
             // Get info from web
             apiClient.fetchCovidInfo { result in
                 switch result {
                 case .success(let covidInfo):
-                    print(covidInfo)
                     self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
                     self.cacheCovidInfo()
+                    completion(self.countriesInfo)
                 case .failure(let error):
+                    completion([])
                     fatalError(error.localizedDescription)
                 }
             }
@@ -43,6 +43,7 @@ class CovidStatsViewModel {
                 case .success(let covidInfo):
                     print(covidInfo)
                     self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
+                    completion(self.countriesInfo)
                 case .failure(let error):
                     fatalError(error.localizedDescription)
                 }

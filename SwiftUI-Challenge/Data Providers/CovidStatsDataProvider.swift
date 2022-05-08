@@ -7,21 +7,24 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 class CovidStatsCDProvider {
     
-    var persistentContainer: NSPersistentContainer
-    
-    init(with persistentContainer: NSPersistentContainer) {
-        self.persistentContainer = persistentContainer
+    var coreDataStack: CoreDataStack
+
+    init(with coreDataStack: CoreDataStack) {
+        self.coreDataStack = coreDataStack
     }
     
     func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfo], CoreDataError>) -> Void) {
         let fetchRequest:NSFetchRequest<CovidInfo> = CovidInfo.fetchRequest()
         do {
-            let covidStats:[CovidInfo] = try persistentContainer.viewContext.fetch(fetchRequest)
+            let covidStats:[CovidInfo] = try coreDataStack.persistentContainer.viewContext.fetch(fetchRequest)
+            print(covidStats)
             completion(.success(covidStats))
         } catch {
+            print(error)
             completion(.failure(.fetchFailed))
         }
     }
@@ -29,23 +32,24 @@ class CovidStatsCDProvider {
     
     func saveCovidInfo(countriesCovidInfo: [CountryCovidInfoViewModel]) {
         countriesCovidInfo.forEach { covidInfo in
-            let chachedCovidInfo = CovidInfo(context: persistentContainer.viewContext)
-            chachedCovidInfo.infected = Int32(covidInfo.infected ?? 0)
-            chachedCovidInfo.tested = Int32(covidInfo.tested ?? 0)
-            chachedCovidInfo.recovered = Int32(covidInfo.recovered ?? 0)
-            chachedCovidInfo.deceased = Int32(covidInfo.deceased ?? 0)
-            chachedCovidInfo.moreDataURL = covidInfo.moreDataURL
-            chachedCovidInfo.historyDataURL = covidInfo.historyDataURL
-            chachedCovidInfo.sourceURL = covidInfo.sourceURL
-            chachedCovidInfo.lastUpdatedApify = covidInfo.lastUpdatedApify
-            chachedCovidInfo.lastUpdatedSource = covidInfo.lastUpdatedSource ?? ""
-            save()
+            let cachedCovidInfo = CovidInfo(context: coreDataStack.persistentContainer.viewContext)
+            cachedCovidInfo.country = covidInfo.country
+            cachedCovidInfo.infected = Int32(covidInfo.infected ?? 0)
+            cachedCovidInfo.tested = Int32(covidInfo.tested ?? 0)
+            cachedCovidInfo.recovered = Int32(covidInfo.recovered ?? 0)
+            cachedCovidInfo.deceased = Int32(covidInfo.deceased ?? 0)
+            cachedCovidInfo.moreDataURL = covidInfo.moreDataURL
+            cachedCovidInfo.historyDataURL = covidInfo.historyDataURL
+            cachedCovidInfo.sourceURL = covidInfo.sourceURL
+            cachedCovidInfo.lastUpdatedApify = covidInfo.lastUpdatedApify
+            cachedCovidInfo.lastUpdatedSource = covidInfo.lastUpdatedSource ?? ""
         }
+        coreDataStack.saveContext()
     }
     
     func save() {
         do {
-            try persistentContainer.viewContext.save()
+            try coreDataStack.persistentContainer.viewContext.save()
         } catch {
             fatalError()
         }

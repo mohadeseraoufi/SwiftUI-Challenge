@@ -9,13 +9,16 @@ import SwiftUI
 
 struct HomeStatsView: View {
    
-    @Environment(\.managedObjectContext) var managedObjectContext
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-    lazy var covidStatsViewModel = CovidStatsViewModel(appDelegate: appDelegate)
+    @StateObject var covidStatsViewModel = CovidStatsViewModel()
     
     var body: some View {
         Text("Core Data")
+            .onAppear {
+                covidStatsViewModel.getCovidStatsInfo(completion: { covidInfo in
+                    print(covidInfo[0].country)
+                })
+            }
     }
 
    

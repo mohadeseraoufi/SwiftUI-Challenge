@@ -2,7 +2,7 @@
 //  CovidInfo+CoreDataClass.swift
 //  SwiftUI-Challenge
 //
-//  Created by Mohadese Raoufi on 5/4/22.
+//  Created by Mohadese Raoufi on 5/8/22.
 //
 //
 
