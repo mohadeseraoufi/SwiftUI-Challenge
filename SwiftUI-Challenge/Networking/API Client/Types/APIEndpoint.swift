@@ -16,6 +16,7 @@ internal enum APIEndpoint: Hashable, CaseIterable {
     
     case covidInfo
     case countryDetail(String)
+    case refreshInfo
     
     // MARK: - Properties
     
@@ -25,6 +26,8 @@ internal enum APIEndpoint: Hashable, CaseIterable {
                 return "datasets/ga7yLcJHGazqTHcpt/items"
             case .countryDetail(let address):
                 return address
+            case .refreshInfo:
+                return "acts/petrpatek~covid-19-aggregator/runs?token=apify_api_EG67gRT6jabXb9USHD0XWfeAY1aggQ1oGEpi"
         }
     }
     

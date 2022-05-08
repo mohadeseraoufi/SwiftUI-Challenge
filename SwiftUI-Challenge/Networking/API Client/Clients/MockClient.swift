@@ -16,9 +16,6 @@ import Foundation
 
 final class MockClient: APIClient {
     
-
-    typealias Model = CovidInfoModel
-
     // MARK: - Types
 
    enum Response {
@@ -71,6 +68,22 @@ final class MockClient: APIClient {
             case .success(let url):
                 self.response(for: url) { (covidDetailInfo: CountryCovidDetailModel) in
                     completion(.success(covidDetailInfo))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+        }
+    }
+    
+    func refreshInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
+        guard let response = endpoints[.covidInfo] else {
+            completion(.failure(.requestFailed))
+            return
+        }
+
+        switch response {
+            case .success(let url):
+                self.response(for: url) { (episodes: [CovidInfoModel]) in
+                    completion(.success(episodes))
                 }
             case .failure(let error):
                 completion(.failure(error))

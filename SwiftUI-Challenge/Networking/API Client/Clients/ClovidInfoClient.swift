@@ -12,10 +12,7 @@ import Foundation
 final class CovidInfoClient: APIClient {
 
     // MARK: - Properties
-
-    // MARK: -
-    typealias Model = CovidInfoModel
-
+    
     private let baseUrl: URL
 
     // MARK: - Initialization
@@ -29,7 +26,18 @@ final class CovidInfoClient: APIClient {
 
     func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
         // Create and Initiate Data Task
-        URLSession.shared.dataTask(with: request(for: .covidInfo)) { (data, response, error) in
+        sendRequest(with: request(for: .covidInfo), completion)
+    }
+    
+    func refreshInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
+        
+        sendRequest(with: request(for: .refreshInfo), completion)
+
+    }
+    
+    func sendRequest<T: Codable>(with request: URLRequest,
+                     _ completion: @escaping (Result<T, APIError>) -> Void) {
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
                     // Initialize JSON Decoder
@@ -40,7 +48,7 @@ final class CovidInfoClient: APIClient {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
 
                     // Decode JSON Response
-                    let countriesCovidInfo = try decoder.decode([CovidInfoModel].self, from: data)
+                    let countriesCovidInfo = try decoder.decode(T.self, from: data)
 
                     // Invoke Handler
                     completion(.success(countriesCovidInfo))

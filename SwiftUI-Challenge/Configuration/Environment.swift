@@ -63,17 +63,17 @@ enum EnvironmentSettings: String {
     
 }
 
-#warning("Urls should change with .json file")
+#warning("In development stages, json file of mock apis will be loaded")
 private enum MockAPI {
     
     enum CovidInfo {
         
-        static let success = URL(string: "https://api.apify.com/v2/datasets/ga7yLcJHGazqTHcpt/items")!
+        static let success = URL(string: "https://...json")!
         
     }
     enum CovidInfoDetail {
         
-        static let success = "https://api.apify.com/v2/key-value-stores/pp4Wo2slUJ78ZnaAi/records/LATEST?disableRedirect=true"
+        static let success = "https://...json"
         
     }
 }
