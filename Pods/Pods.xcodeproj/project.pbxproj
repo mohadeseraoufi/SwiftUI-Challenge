@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02E0144304501155F1984812B9BD7BCA /* OnDeactivateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403EB431956040B71AA60739D9A41F3 /* OnDeactivateModifier.swift */; };
+		0DDC5FDF80FE968D74A028962BF78898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		138E38F1517A270599E5823A39DFED55 /* PagingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BE1BFC37E20903864A8919FBA23B7 /* PagingAnimation.swift */; };
+		1E77045D8164AADFCE91B281C604AF7F /* SwipeInteractionArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75EC6528A16764C0B369F89A220B07 /* SwipeInteractionArea.swift */; };
+		1F85C387A8ED2F0989455193BF3376D9 /* SwiftUIPager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FBC4301838366161DDAA14FBE60478 /* SwiftUIPager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27449DC4A475A51428DD9FB0B11F8B6F /* Pods-SwiftUI-Challenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74DFBBA932AFAED2322A201FE549BE7A /* Pods-SwiftUI-Challenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		280977636CEAA213BB94A614D7CB5B83 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EC93547A610D4EECB448D57B890D53 /* Page.swift */; };
+		470F37287204077F05C6C3448EE4244B /* PositionAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06669429A8060F9C0A17DDF036E445AA /* PositionAlignment.swift */; };
+		493CD21AAD3A513FE04FE1B4D1A5E56A /* PagerContent+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED987EB87158B05FD16299D150511C7F /* PagerContent+Helper.swift */; };
+		4A25C2E53E0E20533E17F88F65E5D727 /* Pods-SwiftUI-ChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAD07590A49414065A2A4AE672BC694 /* Pods-SwiftUI-ChallengeTests-dummy.m */; };
+		543ECD2B814BECA9C9F4D23B7DEF479A /* PaginationSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46768809661DA8A0A260F65BE5108D /* PaginationSensitivity.swift */; };
+		7060B37E7B8F2338204CE9E11EB076CC /* Pods-SwiftUI-Challenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DBF75A79AA9E9D52703F5CC102E4F1 /* Pods-SwiftUI-Challenge-dummy.m */; };
+		735F0E14EED5D71E31A65280E1266E4C /* PagerContent+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E2103428FCB91F4045D4C5F840FFCF /* PagerContent+Buildable.swift */; };
+		774CE5D44E8239A87FC096F94FF0112D /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FCA8D53D1C6EA27315F46EAD38591 /* SwipeDirection.swift */; };
+		7C109B53B722F9F6F1D63BCF1A007E6E /* View+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6FBB898FB65B98D13F6FABC9E48C5A /* View+Helper.swift */; };
+		8000E0918F6ECCE824C60B90A2AF74F9 /* Pods-SwiftUI-ChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4018B0A27D111918778D3659134CD83E /* Pods-SwiftUI-ChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90CFE6CB47C41D10C5357F18DE7F9B89 /* SwiftUIPager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CB1B1DF737BD4CA668F1BA6F8D1883 /* SwiftUIPager-dummy.m */; };
+		944ABB3D63E590C898412B499A358031 /* GesturePriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD92A204138290DBD3A894B4DC50875 /* GesturePriority.swift */; };
+		B016B5DFD4296D236E7C4E27738AFF04 /* Pager+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94125BCB2ABF4D3E9F379AABF57089 /* Pager+Buildable.swift */; };
+		B113BAE5321D2C80B712EE8E041BFFE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B139CF153D16F75BF27CE8D16165BD84 /* CGPoint+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA36A5D72220451E07D9CF36D0813D /* CGPoint+Angle.swift */; };
+		CC5EC7F332FF8FB4DFF02BAAED771B67 /* PageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02EF69EC76E1055A14B2B7678472694 /* PageTransition.swift */; };
+		D15B277F61A5161E4EBE72B1107D18C1 /* ContentLoadingPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E601CC7C50A5CD428F3A43EF647A8C4 /* ContentLoadingPolicy.swift */; };
+		DFD0D7B9EE3342733F6F9B1409F2E266 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C52C0A75CB49559632158189655DA8 /* Pager.swift */; };
+		E41CA9D6304E994B45BEAFBAEC5F7E21 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217A11B08BD154228466F357F67E9C1 /* Buildable.swift */; };
+		ECF4076A204F61181C6EE4FE2BA1DA97 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81E576CDEA3BB6EE286754731DBBF3F /* PageWrapper.swift */; };
+		F1462BF6022AEABFD52CDCC14692417A /* PagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC631F681F97DE9CC11C4D12D7D3728F /* PagerContent.swift */; };
+		F2B9E8171E3C1CE4CE3851477ECA633F /* OnAnimationCompletedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD50596B0661BDD6770D2018DC5D7E6 /* OnAnimationCompletedModifier.swift */; };
+		F33697D37D38692AD6BD536E1215F98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B7E8A3464B3688DD9BAC141F391E9DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EDD561B01B453B33504B0EACB2107CC;
+			remoteInfo = SwiftUIPager;
+		};
+		BBDBFF7BE42CCDEF05C4AD50EB859DF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71691C524204F84E9A43E0AA3326D174;
+			remoteInfo = "Pods-SwiftUI-Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06669429A8060F9C0A17DDF036E445AA /* PositionAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PositionAlignment.swift; path = Sources/SwiftUIPager/PageConfiguration/PositionAlignment.swift; sourceTree = "<group>"; };
+		13FBC4301838366161DDAA14FBE60478 /* SwiftUIPager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftUIPager-umbrella.h"; sourceTree = "<group>"; };
+		13FF45B318333126A606607852D59C5D /* SwiftUIPager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftUIPager.debug.xcconfig; sourceTree = "<group>"; };
+		1403EB431956040B71AA60739D9A41F3 /* OnDeactivateModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnDeactivateModifier.swift; path = Sources/SwiftUIPager/Helpers/OnDeactivateModifier.swift; sourceTree = "<group>"; };
+		22DA36A5D72220451E07D9CF36D0813D /* CGPoint+Angle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Angle.swift"; path = "Sources/SwiftUIPager/Helpers/CGPoint+Angle.swift"; sourceTree = "<group>"; };
+		24EF5AD4084F3620290D3121916F57C1 /* Pods-SwiftUI-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUI-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A0F1191A570C2D2CD784E5EB8B1D4E7 /* Pods-SwiftUI-ChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftUI-ChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A1735E92EF3A317A4D4B8879FB98FA9 /* Pods-SwiftUI-Challenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftUI-Challenge-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B46768809661DA8A0A260F65BE5108D /* PaginationSensitivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaginationSensitivity.swift; path = Sources/SwiftUIPager/PageConfiguration/PaginationSensitivity.swift; sourceTree = "<group>"; };
+		4018B0A27D111918778D3659134CD83E /* Pods-SwiftUI-ChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftUI-ChallengeTests-umbrella.h"; sourceTree = "<group>"; };
+		45CB1B1DF737BD4CA668F1BA6F8D1883 /* SwiftUIPager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftUIPager-dummy.m"; sourceTree = "<group>"; };
+		49E2103428FCB91F4045D4C5F840FFCF /* PagerContent+Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PagerContent+Buildable.swift"; path = "Sources/SwiftUIPager/PagerContent+Buildable.swift"; sourceTree = "<group>"; };
+		4E601CC7C50A5CD428F3A43EF647A8C4 /* ContentLoadingPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentLoadingPolicy.swift; path = Sources/SwiftUIPager/PageConfiguration/ContentLoadingPolicy.swift; sourceTree = "<group>"; };
+		4F0C9870E3C7C10999A6630050CEF1BE /* Pods-SwiftUI-Challenge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftUI-Challenge-Info.plist"; sourceTree = "<group>"; };
+		57C52C0A75CB49559632158189655DA8 /* Pager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pager.swift; path = Sources/SwiftUIPager/Pager.swift; sourceTree = "<group>"; };
+		5AD50596B0661BDD6770D2018DC5D7E6 /* OnAnimationCompletedModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnAnimationCompletedModifier.swift; path = Sources/SwiftUIPager/Helpers/OnAnimationCompletedModifier.swift; sourceTree = "<group>"; };
+		5CEEBEB040EFCD95D3119DF3CBEC926D /* Pods-SwiftUI-ChallengeTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SwiftUI-ChallengeTests"; path = Pods_SwiftUI_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F83E5B3BB1F51586A8A4630D791D536 /* SwiftUIPager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftUIPager-Info.plist"; sourceTree = "<group>"; };
+		61EC93547A610D4EECB448D57B890D53 /* Page.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Page.swift; path = Sources/SwiftUIPager/Page.swift; sourceTree = "<group>"; };
+		7015E05B6236D33AB277AF59C27E1CBC /* Pods-SwiftUI-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUI-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		74DFBBA932AFAED2322A201FE549BE7A /* Pods-SwiftUI-Challenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftUI-Challenge-umbrella.h"; sourceTree = "<group>"; };
+		7E75EC6528A16764C0B369F89A220B07 /* SwipeInteractionArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeInteractionArea.swift; path = Sources/SwiftUIPager/PageConfiguration/SwipeInteractionArea.swift; sourceTree = "<group>"; };
+		7FE58681860217814990E5C2BBAA652B /* SwiftUIPager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftUIPager-prefix.pch"; sourceTree = "<group>"; };
+		86577A4035A7A6D80497B9C4444296C5 /* Pods-SwiftUI-ChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftUI-ChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8D94125BCB2ABF4D3E9F379AABF57089 /* Pager+Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Pager+Buildable.swift"; path = "Sources/SwiftUIPager/Pager+Buildable.swift"; sourceTree = "<group>"; };
+		937BE1BFC37E20903864A8919FBA23B7 /* PagingAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingAnimation.swift; path = Sources/SwiftUIPager/PageConfiguration/PagingAnimation.swift; sourceTree = "<group>"; };
+		984F09AB6692F8C8C37B4E208E3FADBD /* Pods-SwiftUI-ChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftUI-ChallengeTests.modulemap"; sourceTree = "<group>"; };
+		98DBF75A79AA9E9D52703F5CC102E4F1 /* Pods-SwiftUI-Challenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUI-Challenge-dummy.m"; sourceTree = "<group>"; };
+		9CD92A204138290DBD3A894B4DC50875 /* GesturePriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GesturePriority.swift; path = Sources/SwiftUIPager/PageConfiguration/GesturePriority.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B81E576CDEA3BB6EE286754731DBBF3F /* PageWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageWrapper.swift; path = Sources/SwiftUIPager/PageWrapper.swift; sourceTree = "<group>"; };
+		C217A11B08BD154228466F357F67E9C1 /* Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buildable.swift; path = Sources/SwiftUIPager/Helpers/Buildable.swift; sourceTree = "<group>"; };
+		C2F51D127F5DB32D3F442D2522C2B44A /* SwiftUIPager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftUIPager.modulemap; sourceTree = "<group>"; };
+		C45D354D2C1008D419027BAE6DBFFE2E /* SwiftUIPager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftUIPager.release.xcconfig; sourceTree = "<group>"; };
+		C90AC13A517A04095BA24E69B9F349F7 /* Pods-SwiftUI-Challenge */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SwiftUI-Challenge"; path = Pods_SwiftUI_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB34FEBD41956458C444050BB5DD41DA /* Pods-SwiftUI-Challenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftUI-Challenge.modulemap"; sourceTree = "<group>"; };
+		CB42D5AEE5F07B79F971D6027FFEF7A2 /* Pods-SwiftUI-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUI-Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		CC631F681F97DE9CC11C4D12D7D3728F /* PagerContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerContent.swift; path = Sources/SwiftUIPager/PagerContent.swift; sourceTree = "<group>"; };
+		D04765D4B63BF1E70BDD63F00315E4D0 /* Pods-SwiftUI-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUI-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E04C53D71A70B8A4D7AD56977F08F6E9 /* Pods-SwiftUI-Challenge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftUI-Challenge-frameworks.sh"; sourceTree = "<group>"; };
+		EAAD07590A49414065A2A4AE672BC694 /* Pods-SwiftUI-ChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUI-ChallengeTests-dummy.m"; sourceTree = "<group>"; };
+		ED1FCA8D53D1C6EA27315F46EAD38591 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwiftUIPager/PageConfiguration/SwipeDirection.swift; sourceTree = "<group>"; };
+		ED987EB87158B05FD16299D150511C7F /* PagerContent+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PagerContent+Helper.swift"; path = "Sources/SwiftUIPager/PagerContent+Helper.swift"; sourceTree = "<group>"; };
+		EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftUIPager; path = SwiftUIPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02EF69EC76E1055A14B2B7678472694 /* PageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageTransition.swift; path = Sources/SwiftUIPager/PageTransition.swift; sourceTree = "<group>"; };
+		F6752E6E68F550F9D67B016ADC295D6A /* Pods-SwiftUI-Challenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftUI-Challenge-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9EF8D04205BF92241E7F755A3CAF277 /* Pods-SwiftUI-ChallengeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftUI-ChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		FD6FBB898FB65B98D13F6FABC9E48C5A /* View+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+Helper.swift"; path = "Sources/SwiftUIPager/Helpers/View+Helper.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		734851542F634C10602E077B84F104AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDC5FDF80FE968D74A028962BF78898 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73557A869A44563E0D85D487CA03410D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33697D37D38692AD6BD536E1215F98C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D34D0D1538092BF82AE1D5135A40AF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B113BAE5321D2C80B712EE8E041BFFE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B49248F8AA889BA62D45FDDC60B3780 /* Pods-SwiftUI-ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				984F09AB6692F8C8C37B4E208E3FADBD /* Pods-SwiftUI-ChallengeTests.modulemap */,
+				2A0F1191A570C2D2CD784E5EB8B1D4E7 /* Pods-SwiftUI-ChallengeTests-acknowledgements.markdown */,
+				86577A4035A7A6D80497B9C4444296C5 /* Pods-SwiftUI-ChallengeTests-acknowledgements.plist */,
+				EAAD07590A49414065A2A4AE672BC694 /* Pods-SwiftUI-ChallengeTests-dummy.m */,
+				F9EF8D04205BF92241E7F755A3CAF277 /* Pods-SwiftUI-ChallengeTests-Info.plist */,
+				4018B0A27D111918778D3659134CD83E /* Pods-SwiftUI-ChallengeTests-umbrella.h */,
+				D04765D4B63BF1E70BDD63F00315E4D0 /* Pods-SwiftUI-ChallengeTests.debug.xcconfig */,
+				24EF5AD4084F3620290D3121916F57C1 /* Pods-SwiftUI-ChallengeTests.release.xcconfig */,
+			);
+			name = "Pods-SwiftUI-ChallengeTests";
+			path = "Target Support Files/Pods-SwiftUI-ChallengeTests";
+			sourceTree = "<group>";
+		};
+		3C0A61FC7DA5E08A66AE352EF1578968 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DB12359FFFE0E296DE521BD0F82994E /* SwiftUIPager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D87DA30D71A5511703D6D17A597811B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71ED66DDE1734649F9C9DA91F8B1DE39 /* Pods-SwiftUI-Challenge */,
+				1B49248F8AA889BA62D45FDDC60B3780 /* Pods-SwiftUI-ChallengeTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		71ED66DDE1734649F9C9DA91F8B1DE39 /* Pods-SwiftUI-Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				CB34FEBD41956458C444050BB5DD41DA /* Pods-SwiftUI-Challenge.modulemap */,
+				2A1735E92EF3A317A4D4B8879FB98FA9 /* Pods-SwiftUI-Challenge-acknowledgements.markdown */,
+				F6752E6E68F550F9D67B016ADC295D6A /* Pods-SwiftUI-Challenge-acknowledgements.plist */,
+				98DBF75A79AA9E9D52703F5CC102E4F1 /* Pods-SwiftUI-Challenge-dummy.m */,
+				E04C53D71A70B8A4D7AD56977F08F6E9 /* Pods-SwiftUI-Challenge-frameworks.sh */,
+				4F0C9870E3C7C10999A6630050CEF1BE /* Pods-SwiftUI-Challenge-Info.plist */,
+				74DFBBA932AFAED2322A201FE549BE7A /* Pods-SwiftUI-Challenge-umbrella.h */,
+				7015E05B6236D33AB277AF59C27E1CBC /* Pods-SwiftUI-Challenge.debug.xcconfig */,
+				CB42D5AEE5F07B79F971D6027FFEF7A2 /* Pods-SwiftUI-Challenge.release.xcconfig */,
+			);
+			name = "Pods-SwiftUI-Challenge";
+			path = "Target Support Files/Pods-SwiftUI-Challenge";
+			sourceTree = "<group>";
+		};
+		7DB12359FFFE0E296DE521BD0F82994E /* SwiftUIPager */ = {
+			isa = PBXGroup;
+			children = (
+				C217A11B08BD154228466F357F67E9C1 /* Buildable.swift */,
+				22DA36A5D72220451E07D9CF36D0813D /* CGPoint+Angle.swift */,
+				4E601CC7C50A5CD428F3A43EF647A8C4 /* ContentLoadingPolicy.swift */,
+				9CD92A204138290DBD3A894B4DC50875 /* GesturePriority.swift */,
+				5AD50596B0661BDD6770D2018DC5D7E6 /* OnAnimationCompletedModifier.swift */,
+				1403EB431956040B71AA60739D9A41F3 /* OnDeactivateModifier.swift */,
+				61EC93547A610D4EECB448D57B890D53 /* Page.swift */,
+				57C52C0A75CB49559632158189655DA8 /* Pager.swift */,
+				8D94125BCB2ABF4D3E9F379AABF57089 /* Pager+Buildable.swift */,
+				CC631F681F97DE9CC11C4D12D7D3728F /* PagerContent.swift */,
+				49E2103428FCB91F4045D4C5F840FFCF /* PagerContent+Buildable.swift */,
+				ED987EB87158B05FD16299D150511C7F /* PagerContent+Helper.swift */,
+				F02EF69EC76E1055A14B2B7678472694 /* PageTransition.swift */,
+				B81E576CDEA3BB6EE286754731DBBF3F /* PageWrapper.swift */,
+				2B46768809661DA8A0A260F65BE5108D /* PaginationSensitivity.swift */,
+				937BE1BFC37E20903864A8919FBA23B7 /* PagingAnimation.swift */,
+				06669429A8060F9C0A17DDF036E445AA /* PositionAlignment.swift */,
+				ED1FCA8D53D1C6EA27315F46EAD38591 /* SwipeDirection.swift */,
+				7E75EC6528A16764C0B369F89A220B07 /* SwipeInteractionArea.swift */,
+				FD6FBB898FB65B98D13F6FABC9E48C5A /* View+Helper.swift */,
+				99E8570F24CBD105E2687FE3EBB7E01E /* Support Files */,
+			);
+			name = SwiftUIPager;
+			path = SwiftUIPager;
+			sourceTree = "<group>";
+		};
+		99E8570F24CBD105E2687FE3EBB7E01E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2F51D127F5DB32D3F442D2522C2B44A /* SwiftUIPager.modulemap */,
+				45CB1B1DF737BD4CA668F1BA6F8D1883 /* SwiftUIPager-dummy.m */,
+				5F83E5B3BB1F51586A8A4630D791D536 /* SwiftUIPager-Info.plist */,
+				7FE58681860217814990E5C2BBAA652B /* SwiftUIPager-prefix.pch */,
+				13FBC4301838366161DDAA14FBE60478 /* SwiftUIPager-umbrella.h */,
+				13FF45B318333126A606607852D59C5D /* SwiftUIPager.debug.xcconfig */,
+				C45D354D2C1008D419027BAE6DBFFE2E /* SwiftUIPager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftUIPager";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				3C0A61FC7DA5E08A66AE352EF1578968 /* Pods */,
+				D08DC7AA0A3481F483397039EAE33821 /* Products */,
+				3D87DA30D71A5511703D6D17A597811B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D08DC7AA0A3481F483397039EAE33821 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C90AC13A517A04095BA24E69B9F349F7 /* Pods-SwiftUI-Challenge */,
+				5CEEBEB040EFCD95D3119DF3CBEC926D /* Pods-SwiftUI-ChallengeTests */,
+				EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		022FCC9D221927DB177A9C63A2205C11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8000E0918F6ECCE824C60B90A2AF74F9 /* Pods-SwiftUI-ChallengeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23178A58C1168C7EAD2635DFB8E262FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F85C387A8ED2F0989455193BF3376D9 /* SwiftUIPager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0A657EF87E48AA5EC582EED18A8B04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27449DC4A475A51428DD9FB0B11F8B6F /* Pods-SwiftUI-Challenge-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		71691C524204F84E9A43E0AA3326D174 /* Pods-SwiftUI-Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB2A2774833C3CD6C24249756CCD513D /* Build configuration list for PBXNativeTarget "Pods-SwiftUI-Challenge" */;
+			buildPhases = (
+				AF0A657EF87E48AA5EC582EED18A8B04 /* Headers */,
+				16FA45741599CDEA195BCDB0FE1EB919 /* Sources */,
+				7D34D0D1538092BF82AE1D5135A40AF0 /* Frameworks */,
+				BC30C3839A3D6CAB9E33A85BAC9DE053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A87D88BCA87566C9E8400A0907016EB7 /* PBXTargetDependency */,
+			);
+			name = "Pods-SwiftUI-Challenge";
+			productName = Pods_SwiftUI_Challenge;
+			productReference = C90AC13A517A04095BA24E69B9F349F7 /* Pods-SwiftUI-Challenge */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C8E453BA9658806BE1DB5E53C606B5C /* Build configuration list for PBXNativeTarget "SwiftUIPager" */;
+			buildPhases = (
+				23178A58C1168C7EAD2635DFB8E262FF /* Headers */,
+				28AEFACE8A939BA17EE49ECFDC129631 /* Sources */,
+				734851542F634C10602E077B84F104AD /* Frameworks */,
+				977F0EEBBD052BADE068E7201F4D591C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUIPager;
+			productName = SwiftUIPager;
+			productReference = EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager */;
+			productType = "com.apple.product-type.framework";
+		};
+		A262C40EC8A0C92EE7AF6F9F5F491E27 /* Pods-SwiftUI-ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DBABB241AF10F164D61A75488E3987A /* Build configuration list for PBXNativeTarget "Pods-SwiftUI-ChallengeTests" */;
+			buildPhases = (
+				022FCC9D221927DB177A9C63A2205C11 /* Headers */,
+				4EAD7F9B769E1A5E78B379E71EA62B8B /* Sources */,
+				73557A869A44563E0D85D487CA03410D /* Frameworks */,
+				953B1625A0631C6932BD9B2AEA4E1F29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DC659CAA5DAB2F735181B5A878027EC /* PBXTargetDependency */,
+			);
+			name = "Pods-SwiftUI-ChallengeTests";
+			productName = Pods_SwiftUI_ChallengeTests;
+			productReference = 5CEEBEB040EFCD95D3119DF3CBEC926D /* Pods-SwiftUI-ChallengeTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D08DC7AA0A3481F483397039EAE33821 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71691C524204F84E9A43E0AA3326D174 /* Pods-SwiftUI-Challenge */,
+				A262C40EC8A0C92EE7AF6F9F5F491E27 /* Pods-SwiftUI-ChallengeTests */,
+				7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		953B1625A0631C6932BD9B2AEA4E1F29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977F0EEBBD052BADE068E7201F4D591C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC30C3839A3D6CAB9E33A85BAC9DE053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16FA45741599CDEA195BCDB0FE1EB919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7060B37E7B8F2338204CE9E11EB076CC /* Pods-SwiftUI-Challenge-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28AEFACE8A939BA17EE49ECFDC129631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E41CA9D6304E994B45BEAFBAEC5F7E21 /* Buildable.swift in Sources */,
+				B139CF153D16F75BF27CE8D16165BD84 /* CGPoint+Angle.swift in Sources */,
+				D15B277F61A5161E4EBE72B1107D18C1 /* ContentLoadingPolicy.swift in Sources */,
+				944ABB3D63E590C898412B499A358031 /* GesturePriority.swift in Sources */,
+				F2B9E8171E3C1CE4CE3851477ECA633F /* OnAnimationCompletedModifier.swift in Sources */,
+				02E0144304501155F1984812B9BD7BCA /* OnDeactivateModifier.swift in Sources */,
+				280977636CEAA213BB94A614D7CB5B83 /* Page.swift in Sources */,
+				DFD0D7B9EE3342733F6F9B1409F2E266 /* Pager.swift in Sources */,
+				B016B5DFD4296D236E7C4E27738AFF04 /* Pager+Buildable.swift in Sources */,
+				F1462BF6022AEABFD52CDCC14692417A /* PagerContent.swift in Sources */,
+				735F0E14EED5D71E31A65280E1266E4C /* PagerContent+Buildable.swift in Sources */,
+				493CD21AAD3A513FE04FE1B4D1A5E56A /* PagerContent+Helper.swift in Sources */,
+				CC5EC7F332FF8FB4DFF02BAAED771B67 /* PageTransition.swift in Sources */,
+				ECF4076A204F61181C6EE4FE2BA1DA97 /* PageWrapper.swift in Sources */,
+				543ECD2B814BECA9C9F4D23B7DEF479A /* PaginationSensitivity.swift in Sources */,
+				138E38F1517A270599E5823A39DFED55 /* PagingAnimation.swift in Sources */,
+				470F37287204077F05C6C3448EE4244B /* PositionAlignment.swift in Sources */,
+				90CFE6CB47C41D10C5357F18DE7F9B89 /* SwiftUIPager-dummy.m in Sources */,
+				774CE5D44E8239A87FC096F94FF0112D /* SwipeDirection.swift in Sources */,
+				1E77045D8164AADFCE91B281C604AF7F /* SwipeInteractionArea.swift in Sources */,
+				7C109B53B722F9F6F1D63BCF1A007E6E /* View+Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAD7F9B769E1A5E78B379E71EA62B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A25C2E53E0E20533E17F88F65E5D727 /* Pods-SwiftUI-ChallengeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DC659CAA5DAB2F735181B5A878027EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SwiftUI-Challenge";
+			target = 71691C524204F84E9A43E0AA3326D174 /* Pods-SwiftUI-Challenge */;
+			targetProxy = BBDBFF7BE42CCDEF05C4AD50EB859DF8 /* PBXContainerItemProxy */;
+		};
+		A87D88BCA87566C9E8400A0907016EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftUIPager;
+			target = 7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */;
+			targetProxy = 8B7E8A3464B3688DD9BAC141F391E9DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E51A61483E63545AD1B165E1FB722A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7015E05B6236D33AB277AF59C27E1CBC /* Pods-SwiftUI-Challenge.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftUI-Challenge/Pods-SwiftUI-Challenge-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftUI-Challenge/Pods-SwiftUI-Challenge.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A9BBA26C4B8C354226392D7CD54D605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB42D5AEE5F07B79F971D6027FFEF7A2 /* Pods-SwiftUI-Challenge.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftUI-Challenge/Pods-SwiftUI-Challenge-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftUI-Challenge/Pods-SwiftUI-Challenge.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		439428C1714B5C583DB08D12489EA67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45D354D2C1008D419027BAE6DBFFE2E /* SwiftUIPager.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftUIPager/SwiftUIPager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager.modulemap";
+				PRODUCT_MODULE_NAME = SwiftUIPager;
+				PRODUCT_NAME = SwiftUIPager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		501F44348DFD20A8DCC7E804EC9A59DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13FF45B318333126A606607852D59C5D /* SwiftUIPager.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftUIPager/SwiftUIPager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager.modulemap";
+				PRODUCT_MODULE_NAME = SwiftUIPager;
+				PRODUCT_NAME = SwiftUIPager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		749BA4CE501B92313118B666A34A1813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04765D4B63BF1E70BDD63F00315E4D0 /* Pods-SwiftUI-ChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftUI-ChallengeTests/Pods-SwiftUI-ChallengeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftUI-ChallengeTests/Pods-SwiftUI-ChallengeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		ACAF1ABCAC9721142C89DD775C56EF72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24EF5AD4084F3620290D3121916F57C1 /* Pods-SwiftUI-ChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftUI-ChallengeTests/Pods-SwiftUI-ChallengeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftUI-ChallengeTests/Pods-SwiftUI-ChallengeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DBABB241AF10F164D61A75488E3987A /* Build configuration list for PBXNativeTarget "Pods-SwiftUI-ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749BA4CE501B92313118B666A34A1813 /* Debug */,
+				ACAF1ABCAC9721142C89DD775C56EF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C8E453BA9658806BE1DB5E53C606B5C /* Build configuration list for PBXNativeTarget "SwiftUIPager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501F44348DFD20A8DCC7E804EC9A59DE /* Debug */,
+				439428C1714B5C583DB08D12489EA67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB2A2774833C3CD6C24249756CCD513D /* Build configuration list for PBXNativeTarget "Pods-SwiftUI-Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E51A61483E63545AD1B165E1FB722A1 /* Debug */,
+				3A9BBA26C4B8C354226392D7CD54D605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
