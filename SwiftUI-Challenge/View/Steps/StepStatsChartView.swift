@@ -29,7 +29,7 @@ struct StepStatsChartView: View {
                                     
                                     // Set chart bar for each week days
                                     Rectangle()
-                                        .foregroundColor(.white.opacity(0.1))
+                                        .foregroundColor(Color("tabColor"))
                                         .cornerRadius(hstackGeo.size.width/7)
                                         .frame(width: hstackGeo.size.width/14)
                                     

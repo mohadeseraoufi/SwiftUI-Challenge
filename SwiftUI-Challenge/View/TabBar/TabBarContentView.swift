@@ -22,7 +22,7 @@ struct TabBarContentView: View {
                 }
         }.onAppear {
             let appearance = UITabBarAppearance()
-            appearance.backgroundColor = UIColor(red:0.06, green:0.07, blue:0.10, alpha:1.00)
+            appearance.backgroundColor = UIColor(Color("tabColor"))
             
             UITabBar.appearance().standardAppearance = appearance
             

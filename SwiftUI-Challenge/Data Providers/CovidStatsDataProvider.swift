@@ -18,6 +18,8 @@ class CovidStatsCDProvider {
     
     func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfo], CoreDataError>) -> Void) {
         let fetchRequest:NSFetchRequest<CovidInfo> = CovidInfo.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "country", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         do {
             let covidStats:[CovidInfo] = try coreDataStack.persistentContainer.viewContext.fetch(fetchRequest)
             print(covidStats)
@@ -30,6 +32,7 @@ class CovidStatsCDProvider {
     
     
     func saveCovidInfo(countriesCovidInfo: [CountryCovidInfoViewModel]) {
+        deleteAllData("CovidInfo")
         countriesCovidInfo.forEach { covidInfo in
             let cachedCovidInfo = CovidInfo(context: coreDataStack.persistentContainer.viewContext)
             cachedCovidInfo.country = covidInfo.country
@@ -44,6 +47,20 @@ class CovidStatsCDProvider {
             cachedCovidInfo.lastUpdatedSource = covidInfo.lastUpdatedSource ?? ""
         }
         coreDataStack.saveContext()
+    }
+    
+    func deleteAllData(_ entity:String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try coreDataStack.persistentContainer.viewContext.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                coreDataStack.persistentContainer.viewContext.delete(objectData)
+            }
+        } catch let error {
+            print("Detele all data in \(entity) error :", error)
+        }
     }
     
 }
