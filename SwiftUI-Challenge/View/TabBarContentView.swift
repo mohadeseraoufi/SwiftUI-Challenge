@@ -14,11 +14,11 @@ struct TabBarContentView: View {
         TabView{
             CovidStatsContentView()
                 .tabItem {
-                    Label("Covid-19", systemImage: "star")
+                    Label("Covid-19", image: "covid")
                 }
             CovidStatsContentView()
                 .tabItem{
-                    Label("Steps", systemImage: "plus")
+                    Label("Steps", image: "step")
                 }
         }.onAppear {
             let appearance = UITabBarAppearance()
