@@ -9,12 +9,9 @@ import SwiftUI
 @main
 struct SwiftUI_ChallengeApp: App {
 
-    @StateObject private var dataController = DataController()
-
     var body: some Scene {
         WindowGroup {
             TabBarContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

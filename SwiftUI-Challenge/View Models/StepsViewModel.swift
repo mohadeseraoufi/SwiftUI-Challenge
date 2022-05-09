@@ -9,11 +9,11 @@ import SwiftUI
 
 class StepsViewModel: ObservableObject{
     
-    private var healthStore: HealthStore?
+    private var healthController: HealthController?
     @Published var tabItems = [StepsTab]()
     
     init(){
-        healthStore = HealthStore()
+        healthController = HealthController()
     }
     
     public func getNewStepTab(from startDate: Date, to endDate: Date){
@@ -37,10 +37,10 @@ class StepsViewModel: ObservableObject{
     
     public func getPreviousWeekSteps(from startDate: Date, to endDate: Date, completion: @escaping ([Step])->()){
         var steps: [Step] = []
-        if let healthStore = healthStore {
-            healthStore.requestAuthorisation { success in
+        if let healthController = healthController {
+            healthController.requestAuthorisation { success in
                 if success{
-                    healthStore.calculateSteps(startDate: startDate, endDate: endDate) { statisticCollection in
+                    healthController.calculateSteps(startDate: startDate, endDate: endDate) { statisticCollection in
                         if let statisticCollection = statisticCollection {
                             statisticCollection.enumerateStatistics(from: startDate, to: endDate) { statistics, stop in
                                 

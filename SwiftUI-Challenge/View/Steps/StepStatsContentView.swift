@@ -7,22 +7,13 @@
 import SwiftUI
 import SwiftUIPager
 
-
 struct StepStatsContentView: View , StepsTabDelegate{
     
-    
     @StateObject var stepsViewModel = StepsViewModel()
-    private var fakeTab = StepsTab(tabType: .loading)
+    private var loadingTab = StepsTab(tabType: .loading)
     @State private var chartPage: Page = .first()
-        
     @State var selectedStep = Step(count: 0, date: Date())
-    
     @State var chartDate: String = ""
-    
-    init(){
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().barTintColor = .black
-    }
 
     var body: some View {
         
@@ -30,74 +21,82 @@ struct StepStatsContentView: View , StepsTabDelegate{
             GeometryReader{geo in
                 ZStack(alignment: .top){
                     
+                    // Background Color
                     Color
                         .black
                         .edgesIgnoringSafeArea(.all)
                     
                     VStack(alignment: .leading, spacing: 20){
-                        
                         ZStack(alignment: .bottomLeading){
+                            
+                            // Chart date
                             Divider()
                                 .background(Color.white.opacity(0.3))
                                 .padding(.bottom, 5)
                                 .padding(.trailing, 40)
+                            
                             Text(chartDate)
                                 .foregroundColor(.white)
                                 .padding(.trailing, 10)
                                 .background(Color.black)
                         }
-                        
-                        Pager(page: chartPage, data: stepsViewModel.tabItems+[fakeTab], id: \.id) { tab in
+                        // Slider for show weeks
+                        Pager(page: chartPage, data: stepsViewModel.tabItems+[loadingTab], id: \.id) { tab in
                             
-                            if tab != fakeTab {
-                                
+                            if tab != loadingTab {
+                                // Set chart on slider item
                                 StepStatsChartView(tabItem: tab,
                                 stepsMax: getMaxStepNumberOf(steps: tab.steps),
                                 delegate: self)
                                 
                             } else {
+                                // Show loading on last page
                                 ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
                             }
                         }
-                        .horizontal(.rightToLeft)
                         .onPageChanged { newPage in
-//                            guard newPage == stepsViewModel.tabItems.count else{ return }
-                            
                             if newPage == stepsViewModel.tabItems.count{
+                                
+                                // Calculate start and end of previous week
                                 let endDate = Calendar.current.date(byAdding: .day, value: -1, to: stepsViewModel.tabItems[newPage-1].startDate)!
                                 let startDate = Calendar.current.date(byAdding: .day, value: -6, to: endDate)!
-                                
+                                // Update chart date
                                 changeChartDate(from: startDate, to: endDate)
+                                
+                                // Get steps of previous week
                                 stepsViewModel.getNewStepTab(from: startDate,
                                                      to: endDate)
                             }else{
-                                changeChartDate(from:
-                                                    stepsViewModel.tabItems[newPage].startDate,
-                                                to: stepsViewModel.tabItems[newPage].endDate)
-
+                                // Update chart Date
+                                changeChartDate(
+                                    from: stepsViewModel.tabItems[newPage].startDate,
+                                    to: stepsViewModel.tabItems[newPage].endDate)
                             }
-                            
                         }
-                        .frame(width: geo.size.width, height: geo.size.height/2.5, alignment: .center)
+                        .horizontal(.rightToLeft)
+                        .frame(width: geo.size.width, height: geo.size.height/2.6, alignment: .center)
                         
                         VStack(alignment: .leading, spacing: 0){
+                            
+                            // Selected weekday from chart
                             let weekDayIndex = Calendar.current.component(.weekday, from: selectedStep.date)-1
                             let weekDay = DateFormatter().weekdaySymbols[weekDayIndex]
-                            
                             Text(String(weekDay))
                                 .foregroundColor(Color("mainColor"))
                             
+                            // Steps Count of selected day
                             HStack(alignment: .firstTextBaseline){
                                 Image("stepStats")
                                     .resizable()
                                     .foregroundColor(.yellow)
                                     .frame(width: 40, height: 40)
-                                    
                                 
                                 Text(String(selectedStep.count))
                                     .font(Font.custom("Avenir", size: 50))
                                     .foregroundColor(.white)
                                     .bold()
+                                
                                 Text("steps")
                                     .foregroundColor(.white.opacity(0.5))
                             }
@@ -108,6 +107,8 @@ struct StepStatsContentView: View , StepsTabDelegate{
             }
             .navigationBarTitle(Text("Steps"))
         }.onAppear {
+            
+            // Get steps of first week
             if stepsViewModel.tabItems.isEmpty{
                 let endDate = Date()
                 let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
@@ -115,24 +116,20 @@ struct StepStatsContentView: View , StepsTabDelegate{
                     stepsViewModel.getNewStepTab(from: startDate,
                                      to: endDate)
             }
+            
+            UINavigationBar.appearance().barTintColor = .black
+            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         }
     }
     
+    // Call from stepsChartView
     func stepSelected(step: Step) {
+        // Update selected step
         selectedStep = step
     }
     
-    
-    func changeChartDate(tab: StepsTab){
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd"
-        let startDate = dateFormatterPrint.string(from: tab.startDate)
-        dateFormatterPrint.dateFormat = "MMM dd, yyyy"
-        let endDate = dateFormatterPrint.string(from: tab.endDate)
-        chartDate = "\(startDate) - \(endDate)"
-    }
-    
     func changeChartDate(from startDate: Date, to endDate: Date){
+        // Update chart date
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "MMM dd"
         let startDate = dateFormatterPrint.string(from: startDate)
@@ -142,6 +139,7 @@ struct StepStatsContentView: View , StepsTabDelegate{
     }
     
     private func getMaxStepNumberOf(steps:[Step]) -> Int {
+        // Get max of steps count
         let max = steps.max { $0.count < $1.count }?.count ?? 0
         if max == 0{
             return 1
@@ -156,8 +154,4 @@ struct StepStatsContentView_Previews: PreviewProvider {
     static var previews: some View {
         StepStatsContentView()
     }
-}
-
-protocol StepsTabDelegate{
-    func stepSelected(step: Step)
 }

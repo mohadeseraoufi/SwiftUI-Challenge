@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CovidCardView: View {
     
     @Binding var covidInfo: CountryCovidInfoViewModel
@@ -15,18 +14,20 @@ struct CovidCardView: View {
     var body: some View {
         
         ZStack(alignment: .leading){
-            
+            // Card Background Color
             Color(red:0.12, green:0.15, blue:0.27)
                 .cornerRadius(20)
             
             VStack(alignment: .leading, spacing: 0){
                 Spacer()
                 
+                // Country name
                 Text(covidInfo.country)
                     .foregroundColor(.white)
                     .font(.title2)
                     .bold()
                 
+                // Covid infected
                 HStack{
                     Circle()
                         .fill(Color.red)
@@ -41,14 +42,9 @@ struct CovidCardView: View {
                         .bold()
                 }
                 
-                
                 Spacer()
             }.padding()
-
         }
-        
-        
- 
     }
 }
 

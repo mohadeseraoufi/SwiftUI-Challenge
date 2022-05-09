@@ -7,7 +7,7 @@
 
 import HealthKit
 
-class HealthStore{
+class HealthController{
     
     var healthStore: HKHealthStore?
     var query: HKStatisticsCollectionQuery?

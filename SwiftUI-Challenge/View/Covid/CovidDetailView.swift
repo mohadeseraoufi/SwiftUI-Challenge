@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CovidDetailView: View {
     
     @Binding var covidDetailInfo: CountryCovidInfoViewModel
@@ -16,10 +15,11 @@ struct CovidDetailView: View {
         
         NavigationView{
             ZStack(alignment: .top){
-                
+                // Background Color
                 Color(red:0.12, green:0.15, blue:0.27)
                     .ignoresSafeArea()
                 
+                // Covid info
                 VStack(alignment: .leading, spacing: 0){
                     HStack(){
                         Circle()
@@ -34,6 +34,7 @@ struct CovidDetailView: View {
                             .foregroundColor(.red)
                             .bold()
                     }
+                    
                     HStack{
                         Circle()
                             .fill(.green)
@@ -47,6 +48,7 @@ struct CovidDetailView: View {
                             .foregroundColor(.green)
                             .bold()
                     }
+                    
                     HStack{
                         Circle()
                             .fill(.white)

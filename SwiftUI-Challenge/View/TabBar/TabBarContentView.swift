@@ -26,8 +26,8 @@ struct TabBarContentView: View {
             
             UITabBar.appearance().standardAppearance = appearance
             
-            let healthStore = HealthStore()
-            healthStore.requestAuthorisation { _ in
+            let healthController = HealthController()
+            healthController.requestAuthorisation { _ in
                 
             }
             
