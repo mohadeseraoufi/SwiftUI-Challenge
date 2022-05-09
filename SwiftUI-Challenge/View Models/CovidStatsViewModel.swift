@@ -38,7 +38,6 @@ class CovidStatsViewModel: ObservableObject {
                     completion(self.countriesInfo)
                 case .failure(let error):
                     completion([])
-                    fatalError(error.localizedDescription)
                 }
             }
         } else {
@@ -50,7 +49,7 @@ class CovidStatsViewModel: ObservableObject {
                     self.countriesInfo = covidInfo.map({ CountryCovidInfoViewModel(covidInfo: $0) })
                     completion(self.countriesInfo)
                 case .failure(let error):
-                    fatalError(error.localizedDescription)
+                    completion([])
                 }
             }
         }

@@ -21,7 +21,6 @@ struct CovidDetailView: View {
                     .ignoresSafeArea()
                 
                 VStack(alignment: .leading, spacing: 0){
-                    
                     HStack(){
                         Circle()
                             .fill(Color.red)
@@ -35,7 +34,6 @@ struct CovidDetailView: View {
                             .foregroundColor(.red)
                             .bold()
                     }
-                    
                     HStack{
                         Circle()
                             .fill(.green)
@@ -49,7 +47,6 @@ struct CovidDetailView: View {
                             .foregroundColor(.green)
                             .bold()
                     }
-                    
                     HStack{
                         Circle()
                             .fill(.white)
@@ -63,7 +60,6 @@ struct CovidDetailView: View {
                             .foregroundColor(.white)
                             .bold()
                     }
-                    
                     HStack{
                         Circle()
                             .fill(.white)
@@ -77,27 +73,19 @@ struct CovidDetailView: View {
                             .foregroundColor(.white)
                             .bold()
                     }
-                    
                 }
-
             }
-            
-
         }
         .navigationBarTitle(Text(covidDetailInfo.country))
         .onAppear{
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().barTintColor = .black
         }
-        
     }
 }
 
-
 struct CovidDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        
         let covidModel = CovidInfoModel(infected: 0,
                                         tested: .null,
                                         recovered: .integer(0),
@@ -110,6 +98,5 @@ struct CovidDetailView_Previews: PreviewProvider {
                                         lastUpdatedSource: "")
         
         CovidDetailView(covidDetailInfo: Binding.constant(CountryCovidInfoViewModel(covidInfo: covidModel)))
-        
     }
 }

@@ -24,14 +24,13 @@ struct CovidStatsContentView: View {
         
         ZStack{
             
-            Rectangle()
-                .foregroundColor(.black)
+            Color.black
                 .edgesIgnoringSafeArea(.all)
             
             NavigationView{
                 List($covidStatsViewModel.countriesInfo){ covidInfo in
-                    
-                    
+
+
                     NavigationLink{
                         CovidDetailView(covidDetailInfo: covidInfo)
                     } label: {
@@ -40,16 +39,27 @@ struct CovidStatsContentView: View {
                     .padding(.trailing, -20.0)
                     .listRowBackground(Color.clear)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    
+
                 }
                 .navigationBarTitle(Text("Covid-19 Stats"))
             }.navigationViewStyle(StackNavigationViewStyle())
+            
+            let isHidden: Bool = !covidStatsViewModel.countriesInfo.isEmpty
+            
+            ProgressView()
+                .frame(width: 100, height: 100, alignment: .center)
+                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                .isHidden(isHidden)
+           
                 
             
         }.onAppear {
-            covidStatsViewModel.getCovidStatsInfo(completion: { covidInfo in
-                print(covidInfo)
-            })
+            if covidStatsViewModel.countriesInfo.isEmpty{
+                covidStatsViewModel.getCovidStatsInfo(completion: { covidInfo in
+                    print(covidInfo)
+                })
+            }
+            
         }
             
     }
@@ -60,5 +70,15 @@ struct CovidStatsContentView: View {
 struct CovoidStatsContentView_Previews: PreviewProvider {
     static var previews: some View {
         CovidStatsContentView()
+    }
+}
+
+extension View {
+    @ViewBuilder func isHidden(_ isHidden: Bool) -> some View {
+        if isHidden {
+            self.hidden()
+        } else {
+            self
+        }
     }
 }

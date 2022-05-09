@@ -16,7 +16,7 @@ struct TabBarContentView: View {
                 .tabItem {
                     Label("Covid-19", image: "covid")
                 }
-            CovidStatsContentView()
+            StepStatsContentView()
                 .tabItem{
                     Label("Steps", image: "step")
                 }
@@ -25,6 +25,11 @@ struct TabBarContentView: View {
             appearance.backgroundColor = UIColor(red:0.06, green:0.07, blue:0.10, alpha:1.00)
             
             UITabBar.appearance().standardAppearance = appearance
+            
+            let healthStore = HealthStore()
+            healthStore.requestAuthorisation { _ in
+                
+            }
             
         }.accentColor(.white)
         
