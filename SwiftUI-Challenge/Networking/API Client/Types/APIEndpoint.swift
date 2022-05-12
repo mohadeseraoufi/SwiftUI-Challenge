@@ -23,7 +23,7 @@ internal enum APIEndpoint: Hashable, CaseIterable {
     var path: String {
         switch self {
             case .covidInfo:
-                return "datasets/ga7yLcJHGazqTHcpt/items"
+                return "datasets/Tu4hT7UesawPDNCcl/items?token=apify_api_EG67gRT6jabXb9USHD0XWfeAY1aggQ1oGEpi"
             case .countryDetail(let address):
                 return address
             case .refreshInfo:

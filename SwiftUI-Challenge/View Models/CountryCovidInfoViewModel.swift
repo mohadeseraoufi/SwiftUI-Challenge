@@ -15,7 +15,7 @@ class CountryCovidInfoViewModel: Identifiable {
     let country: String
     var moreDataURL, historyDataURL: String
     let sourceURL: String?
-    let lastUpdatedApify: String
+    let lastUpdatedApify: String?
     let lastUpdatedSource: String?
     
     init(covidInfo: CovidInfoModel) {

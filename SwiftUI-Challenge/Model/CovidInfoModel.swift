@@ -14,8 +14,7 @@ struct CovidInfoModel: Codable {
     let country: String
     let moreDataURL, historyDataURL: String
     let sourceURL: String?
-    let lastUpdatedApify: String
-    let lastUpdatedSource: String?
+    let lastUpdatedApify, lastUpdatedSource: String?
 
     enum CodingKeys: String, CodingKey {
         case infected, tested, recovered, deceased, country

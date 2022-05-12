@@ -43,9 +43,11 @@ final class CovidInfoClient: APIClient {
     
     // MARK: - Helper Methods
 
-    private func request(for endpoint: APIEndpoint) -> URLRequest {
+    private func request(for endpoint: APIEndpoint) -> URLRequest? {
         // Create URL
-        let url = baseUrl.appendingPathComponent(endpoint.path)
+        guard let url = URL(string: "\(baseUrl)\(endpoint.path)") else {
+            return nil
+        }
 
         // Create Request
         var request = URLRequest(url: url)
@@ -56,8 +58,13 @@ final class CovidInfoClient: APIClient {
         return request
     }
     
-    func sendRequest<T: Codable>(with request: URLRequest,
+    func sendRequest<T: Codable>(with request: URLRequest?,
                      _ completion: @escaping (Result<T, APIError>) -> Void) {
+        guard let request = request else {
+            completion(.failure(.requestFailed))
+            return
+        }
+        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
@@ -77,6 +84,7 @@ final class CovidInfoClient: APIClient {
                     }
                 } catch {
                     // Invoke Handler
+                    print(error)
                     completion(.failure(.invalidResponse))
                 }
 

@@ -37,6 +37,7 @@ class CovidStatsViewModel: ObservableObject {
                     self.cacheCovidInfo()
                     completion(self.countriesInfo)
                 case .failure(let error):
+                    print(error)
                     completion([])
                 }
             }

@@ -43,8 +43,8 @@ class CovidStatsCDProvider {
             cachedCovidInfo.moreDataURL = covidInfo.moreDataURL
             cachedCovidInfo.historyDataURL = covidInfo.historyDataURL
             cachedCovidInfo.sourceURL = covidInfo.sourceURL
-            cachedCovidInfo.lastUpdatedApify = covidInfo.lastUpdatedApify
-            cachedCovidInfo.lastUpdatedSource = covidInfo.lastUpdatedSource ?? ""
+            cachedCovidInfo.lastUpdatedApify = covidInfo.lastUpdatedApify ?? "NA"
+            cachedCovidInfo.lastUpdatedSource = covidInfo.lastUpdatedSource ?? "NA"
         }
         coreDataStack.saveContext()
     }
