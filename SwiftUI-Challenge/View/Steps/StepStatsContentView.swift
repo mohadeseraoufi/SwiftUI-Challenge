@@ -58,15 +58,13 @@ struct StepStatsContentView: View , StepsTabDelegate{
                         .onPageChanged { newPage in
                             if newPage == stepsViewModel.tabItems.count{
                                 
-                                // Calculate start and end of previous week
-                                let endDate = Calendar.current.date(byAdding: .day, value: -1, to: stepsViewModel.tabItems[newPage-1].startDate)!
-                                let startDate = Calendar.current.date(byAdding: .day, value: -6, to: endDate)!
+                                let newWeek = Calendar.current.date(byAdding: .day, value: -2, to: stepsViewModel.tabItems[newPage-1].startDate)!
                                 // Update chart date
-                                changeChartDate(from: startDate, to: endDate)
+                                changeChartDate(from: newWeek.startOfWeek, to: newWeek.endOfWeek)
                                 
                                 // Get steps of previous week
-                                stepsViewModel.getNewStepTab(from: startDate,
-                                                     to: endDate)
+                                stepsViewModel.getNewStepTab(from: newWeek.startOfWeek,
+                                                             to: newWeek.endOfWeek)
                             }else{
                                 // Update chart Date
                                 changeChartDate(
@@ -110,11 +108,11 @@ struct StepStatsContentView: View , StepsTabDelegate{
             
             // Get steps of first week
             if stepsViewModel.tabItems.isEmpty{
-                let endDate = Date()
-                let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
-                changeChartDate(from: startDate, to: endDate)
-                    stepsViewModel.getNewStepTab(from: startDate,
-                                     to: endDate)
+//                let endDate = Date()
+//                let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
+                changeChartDate(from: Date().startOfWeek, to: Date().endOfWeek)
+                    stepsViewModel.getNewStepTab(from: Date().startOfWeek,
+                                     to: Date().endOfWeek)
             }
             
             UINavigationBar.appearance().barTintColor = .black

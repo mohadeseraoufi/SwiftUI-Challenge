@@ -81,8 +81,10 @@ struct StepStatsChartView: View {
         .onAppear{
             
             // Select last day as default
-            if let lastStep = tabItem.steps.last{
-                selectedStep = lastStep
+            if let today = tabItem.steps.first(where: {Calendar.current.dateComponents([.day], from: $0.date) == Calendar.current.dateComponents([.day], from: Date())}){
+                selectedStep = today
+            }else if let lastDay = tabItem.steps.last{
+                selectedStep = lastDay
             }
             if let delegate = delegate {
                 delegate.stepSelected(step: selectedStep)

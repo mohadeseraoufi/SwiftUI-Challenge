@@ -25,7 +25,7 @@ class HealthController{
         
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
         
-        let anchorDate = Calendar.current.startOfDay(for: Date())
+        let anchorDate = Date.mondayAt12()
         
         query = HKStatisticsCollectionQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: anchorDate, intervalComponents: daily)
         
