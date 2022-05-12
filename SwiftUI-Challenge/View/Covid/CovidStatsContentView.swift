@@ -28,7 +28,9 @@ struct CovidStatsContentView: View {
                         // Country cell
                         CovidCardView(covidInfo: covidInfo)
                     }
-                    .padding(.trailing, -20.0)
+                    .padding(.trailing, 20)
+                    .background(Color(red:0.12, green:0.15, blue:0.27))
+                    .cornerRadius(20)
                     .listRowBackground(Color.clear)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
                     
@@ -56,6 +58,8 @@ struct CovidStatsContentView: View {
             }
             
             UITableView.appearance().backgroundColor = .black
+            UITableView.appearance().separatorColor = .clear
+            
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().barTintColor = .black

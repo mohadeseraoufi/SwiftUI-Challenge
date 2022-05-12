@@ -13,38 +13,33 @@ struct CovidCardView: View {
 
     var body: some View {
         
-        ZStack(alignment: .leading){
-            // Card Background Color
-            Color(red:0.12, green:0.15, blue:0.27)
-                .cornerRadius(20)
+        VStack(alignment: .leading, spacing: 0){
+            Spacer()
             
-            VStack(alignment: .leading, spacing: 0){
-                Spacer()
+            // Country name
+            Text(covidInfo.country)
+                .foregroundColor(.white)
+                .font(.title2)
+                .bold()
+            
+            // Covid infected
+            HStack{
+                Circle()
+                    .fill(Color.red)
+                    .frame(width: 10, height: 10)
                 
-                // Country name
-                Text(covidInfo.country)
+                Text("Infected:")
                     .foregroundColor(.white)
-                    .font(.title2)
                     .bold()
                 
-                // Covid infected
-                HStack{
-                    Circle()
-                        .fill(Color.red)
-                        .frame(width: 10, height: 10)
-                    
-                    Text("Infected:")
-                        .foregroundColor(.white)
-                        .bold()
-                    
-                    Text(String(covidInfo.infected ?? 0))
-                        .foregroundColor(.red)
-                        .bold()
-                }
-                
-                Spacer()
-            }.padding()
-        }
+                Text(String(covidInfo.infected ?? 0))
+                    .foregroundColor(.red)
+                    .bold()
+            }
+            
+            Spacer()
+        }.padding()
+
     }
 }
 
