@@ -35,7 +35,7 @@ class StepsViewModel: ObservableObject{
         
     }
     
-    public func getPreviousWeekSteps(from startDate: Date, to endDate: Date, completion: @escaping ([Step])->()){
+    private func getPreviousWeekSteps(from startDate: Date, to endDate: Date, completion: @escaping ([Step])->()){
         var steps: [Step] = []
         if let healthController = healthController {
             healthController.requestAuthorisation { success in
@@ -46,6 +46,7 @@ class StepsViewModel: ObservableObject{
                                 
                                 // Count steps
                                 let count = statistics.sumQuantity()?.doubleValue(for: .count())
+                                print("+++++\(count)")
                                 let step = Step(count: Int(count ?? 0), date: statistics.startDate)
                                 steps.append(step)
                             }
