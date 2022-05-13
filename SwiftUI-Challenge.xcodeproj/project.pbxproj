@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0EE70A282EA6550006D3F8 /* Production-Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4D0EE709282EA6550006D3F8 /* Production-Config.xcconfig */; };
+		4D0EE70C282EA6A30006D3F8 /* Development-Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4D0EE70B282EA6A30006D3F8 /* Development-Config.xcconfig */; };
 		4D61C31228295913002DBBE8 /* Steps+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61C31128295913002DBBE8 /* Steps+Delegates.swift */; };
 		4D728F8C28281C08000BE6C0 /* CovidInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F8828281BAE000BE6C0 /* CovidInfo+CoreDataClass.swift */; };
 		4D728F8D28281C08000BE6C0 /* CovidInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D728F8928281BAE000BE6C0 /* CovidInfo+CoreDataProperties.swift */; };
@@ -70,6 +72,8 @@
 		18C8146E7927B33017264597 /* Pods-SwiftUI-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-ChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-ChallengeTests/Pods-SwiftUI-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		374BF167EA2F5992F1A0EFA9 /* Pods-SwiftUI-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Challenge.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Challenge/Pods-SwiftUI-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		4442106AE8431950C0F09D9C /* Pods_SwiftUI_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0EE709282EA6550006D3F8 /* Production-Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Production-Config.xcconfig"; sourceTree = "<group>"; };
+		4D0EE70B282EA6A30006D3F8 /* Development-Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Development-Config.xcconfig"; sourceTree = "<group>"; };
 		4D61C31128295913002DBBE8 /* Steps+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Steps+Delegates.swift"; sourceTree = "<group>"; };
 		4D728F8828281BAE000BE6C0 /* CovidInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4D728F8928281BAE000BE6C0 /* CovidInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CovidInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -328,6 +332,8 @@
 		4DCD880D28216D6A003B8C5E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				4D0EE70B282EA6A30006D3F8 /* Development-Config.xcconfig */,
+				4D0EE709282EA6550006D3F8 /* Production-Config.xcconfig */,
 				4DCD880E28216D6A003B8C5E /* Environment.swift */,
 			);
 			path = Configuration;
@@ -530,8 +536,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0EE70C282EA6A30006D3F8 /* Development-Config.xcconfig in Resources */,
 				4DCD87EE2821349F003B8C5E /* Preview Assets.xcassets in Resources */,
 				4DCD87EB2821349F003B8C5E /* Assets.xcassets in Resources */,
+				4D0EE70A282EA6550006D3F8 /* Production-Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +686,7 @@
 /* Begin XCBuildConfiguration section */
 		4DCD87F42821349F003B8C5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0EE70B282EA6A30006D3F8 /* Development-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -741,6 +750,7 @@
 		};
 		4DCD87F52821349F003B8C5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0EE709282EA6550006D3F8 /* Production-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

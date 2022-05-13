@@ -22,8 +22,9 @@ enum EnvironmentSettings: String {
         guard let value = Bundle.main.infoDictionary?["BUILD_ENVIRONMENT"] as? String else {
             fatalError("No Configuration Found")
         }
-        
+                
         // Create Environment
+        // Temporary hard coding environment
         guard let environment = EnvironmentSettings(rawValue: "production") else {
             fatalError("Invalid Environment")
         }
@@ -38,7 +39,7 @@ enum EnvironmentSettings: String {
         case .production:
             return URL(string: "https://api.apify.com/v2/")!
         case .development:
-            return URL(string: "https://api.apify.com/dev/")!
+            return URL(string: "https://api.apify.com/v2/")!
         }
     }
     
@@ -63,7 +64,7 @@ enum EnvironmentSettings: String {
     
 }
 
-#warning("In development stages, json file of mock apis will be loaded")
+// In development stages, json file of mock apis will be loaded
 private enum MockAPI {
     
     enum CovidInfo {

@@ -1,0 +1,11 @@
+//
+//  Development-Config.xcconfig
+//  SwiftUI-Challenge
+//
+//  Created by Mohadese Raoufi on 5/3/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BUILD_ENVIRONMENT = development
