@@ -9,8 +9,8 @@
 import Foundation
 //import CocoaLumberjack
 
-final class CovidInfoClient: APIClient {
-
+final class CovidInfoClient: CovidClient {
+    
     // MARK: - Properties
     
     private let baseUrl: URL
@@ -23,22 +23,25 @@ final class CovidInfoClient: APIClient {
     }
 
     // MARK: - Public API
+    
+    func fetchData<T>(from endpoint: APIEndpoint, _ completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable, T : Encodable {
+        
+        sendRequest(with: request(for: endpoint), completion)
+    }
 
     func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
         // Create and Initiate Data Task
-        sendRequest(with: request(for: .covidInfo), completion)
+        fetchData(from: .covidInfo, completion)
     }
     
     func refreshInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
         // Create and Initiate Data Task
-        sendRequest(with: request(for: .refreshInfo), completion)
-
+        fetchData(from: .refreshInfo, completion)
     }
     
     func fetchCovidDetailInfo(with url: String, _ completion: @escaping (Result<CountryCovidDetailModel, APIError>) -> Void) {
         // Create and Initiate Data Task
-        sendRequest(with: request(for: .countryDetail(url)), completion)
-
+        fetchData(from: .countryDetail(url), completion)
     }
     
     // MARK: - Helper Methods

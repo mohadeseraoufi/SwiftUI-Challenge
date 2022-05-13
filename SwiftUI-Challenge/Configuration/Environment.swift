@@ -45,7 +45,7 @@ enum EnvironmentSettings: String {
     
     // MARK: - API Client
 
-    static var apiClient: APIClient {
+    static var CovidClient: CovidClient {
         switch current {
         case .development:
             // Create Mock Client

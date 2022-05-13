@@ -15,7 +15,7 @@ class CovidStatsViewModel: ObservableObject {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Published var countriesInfo:[CountryCovidInfoViewModel] = []
     @Published var detailInfo:CovidStatsDetailViewModel? = nil
-    private var apiClient = EnvironmentSettings.apiClient
+    private var apiClient = EnvironmentSettings.CovidClient
     private lazy var covidStatsDataProvider: CovidStatsCDProvider = {
         let provider = CovidStatsCDProvider(with: appDelegate.coreDataStack)
         return provider

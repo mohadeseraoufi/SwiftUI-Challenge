@@ -14,7 +14,7 @@
 
 import Foundation
 
-final class MockClient: APIClient {
+final class MockClient: CovidClient {
     
     // MARK: - Types
 
@@ -39,55 +39,39 @@ final class MockClient: APIClient {
 
     
     // MARK: - API Client
-
-    func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
-        guard let response = endpoints[.covidInfo] else {
+    
+    func fetchData<T>(from endpoint: APIEndpoint, _ completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable, T : Encodable {
+        
+        guard let response = endpoints[endpoint] else {
             completion(.failure(.requestFailed))
             return
         }
 
         switch response {
             case .success(let url):
-                self.response(for: url) { (episodes: [CovidInfoModel]) in
-                    completion(.success(episodes))
+                self.response(for: url) { (info: T) in
+                    completion(.success(info))
                 }
             case .failure(let error):
                 completion(.failure(error))
         }
+    }
+
+    func fetchCovidInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
+        
+        fetchData(from: .covidInfo, completion)
+        
     }
     
     
     func fetchCovidDetailInfo(with url: String, _ completion: @escaping (Result<CountryCovidDetailModel, APIError>) -> Void) {
         
-        guard let response = endpoints[.countryDetail(url)] else {
-            completion(.failure(.requestFailed))
-            return
-        }
-
-        switch response {
-            case .success(let url):
-                self.response(for: url) { (covidDetailInfo: CountryCovidDetailModel) in
-                    completion(.success(covidDetailInfo))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-        }
+        fetchData(from: .countryDetail(url), completion)
     }
     
     func refreshInfo(_ completion: @escaping (Result<[CovidInfoModel], APIError>) -> Void) {
-        guard let response = endpoints[.covidInfo] else {
-            completion(.failure(.requestFailed))
-            return
-        }
-
-        switch response {
-            case .success(let url):
-                self.response(for: url) { (episodes: [CovidInfoModel]) in
-                    completion(.success(episodes))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-        }
+        
+        fetchData(from: .covidInfo, completion)
     }
     
     private func response<T: Decodable>(for url: URL, completion: @escaping (T) -> Void) {
